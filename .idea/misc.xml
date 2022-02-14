@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/coron/AndroidStudioProjects/iMath/app/src/main/res/drawable/side_nav_bar.xml" value="0.1" />
+        <entry key="..\:/Users/coron/AndroidStudioProjects/iMath/app/src/main/res/layout/activity_main.xml" value="0.12107396149949341" />
+        <entry key="..\:/Users/coron/AndroidStudioProjects/iMath/app/src/main/res/layout/app_bar_main.xml" value="0.12107396149949341" />
         <entry key="..\:/Users/coron/AndroidStudioProjects/iMath/app/src/main/res/layout/content_main.xml" value="0.10309017223910841" />
+        <entry key="..\:/Users/coron/AndroidStudioProjects/iMath/app/src/main/res/layout/fragment_home.xml" value="0.12107396149949341" />
+        <entry key="..\:/Users/coron/AndroidStudioProjects/iMath/app/src/main/res/layout/nav_header_main.xml" value="0.12107396149949341" />
+        <entry key="..\:/Users/coron/AndroidStudioProjects/iMath/app/src/main/res/menu/activity_main_drawer.xml" value="0.1836734693877551" />
+        <entry key="..\:/Users/coron/AndroidStudioProjects/iMath/app/src/main/res/menu/main.xml" value="0.125" />
       </map>
     </option>
   </component>
