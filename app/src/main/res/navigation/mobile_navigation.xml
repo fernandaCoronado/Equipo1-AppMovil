@@ -22,4 +22,11 @@
         android:name="com.example.imath.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_triangle"
+        android:name="com.example.imath.ui.triangle.TriangleFragment"
+        android:label="Triángulo"
+        tools:layout="@layout/triangle_fragment" />
+
 </navigation>

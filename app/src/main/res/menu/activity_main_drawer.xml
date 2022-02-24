@@ -8,4 +8,12 @@
             android:id="@+id/nav_home"
             android:title="@string/menu_home" />
     </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_triangle"
+            android:icon="@drawable/ic_triangulo"
+            android:title="Triángulo" />
+    </group>
+
 </menu>
