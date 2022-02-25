@@ -29,4 +29,10 @@
         android:label="Rectángulo"
         tools:layout="@layout/rectangle_fragment" />
 
+    <fragment
+        android:id="@+id/nav_circle"
+        android:name="com.example.imath.ui.circle.CircleFragment"
+        android:label="Cículo"
+        tools:layout="@layout/circle_fragment" />
+
 </navigation>
