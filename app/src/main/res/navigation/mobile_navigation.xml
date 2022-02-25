@@ -23,4 +23,10 @@
         android:label="Cuadrado"
         tools:layout="@layout/square_fragment" />
 
+    <fragment
+        android:id="@+id/nav_rectangle"
+        android:name="com.example.imath.ui.rectangle.RectangleFragment"
+        android:label="Rectángulo"
+        tools:layout="@layout/rectangle_fragment" />
+
 </navigation>

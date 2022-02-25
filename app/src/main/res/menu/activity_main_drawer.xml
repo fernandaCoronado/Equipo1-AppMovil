@@ -22,6 +22,10 @@
                         android:id="@+id/nav_square"
                         android:icon="@drawable/ic_square"
                         android:title="Cuadrado" />
+                    <item
+                        android:id="@+id/nav_rectangle"
+                        android:icon="@drawable/ic_rectangle"
+                        android:title="Rectángulo" />
                 </group>
             </menu>
         </item>
