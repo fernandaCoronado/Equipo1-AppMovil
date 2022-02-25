@@ -11,13 +11,30 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TabHost;
+import android.widget.TextView;
 
 import com.example.imath.R;
+
+import java.text.DecimalFormat;
 
 public class TriangleFragment extends Fragment {
 
     private TriangleViewModel mViewModel;
+
+    private Spinner spUnidadPerimetro, spUnidadArea;
+    private EditText txtLado1, txtLado2, txtLado3;
+    private EditText txtBase, txtAltura;
+    private TextView tvPerimetro, tvArea;
+    private Button btnPerimetro, btnArea, btnBorrarPerimetro, btnBorrarArea;
+
+    private String unidadPerimetro, unidadArea;
+    private double lado1, lado2, lado3, base, altura;
+    private double perimetro, area;
 
     public static TriangleFragment newInstance() {
         return new TriangleFragment();
@@ -28,6 +45,10 @@ public class TriangleFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         //return inflater.inflate(R.layout.triangle_fragment, container, false);
         View v = inflater.inflate(R.layout.triangle_fragment, container, false);
+
+        /*
+         * Funcionamiento de las pestañas
+         */
 
         TabHost tabs = v.findViewById(android.R.id.tabhost);
         tabs.setup();
@@ -43,6 +64,65 @@ public class TriangleFragment extends Fragment {
         tabs.addTab(spec);
 
         tabs.setCurrentTab(0);
+
+        /*
+         * Rescatamos los atributos
+         */
+
+        // Cajas de texto
+        txtLado1 = v.findViewById(R.id.txtLado1);
+        txtLado2 = v.findViewById(R.id.txtLado2);
+        txtLado3 = v.findViewById(R.id.txtLado3);
+        txtBase = v.findViewById(R.id.txtBase);
+        txtAltura = v.findViewById(R.id.txtAltura);
+        // TextView
+        tvPerimetro = v.findViewById(R.id.tvPerimetro);
+        tvArea = v.findViewById(R.id.tvArea);
+        // Botones
+        btnPerimetro = v.findViewById(R.id.btnPerimetro);
+        btnArea = v.findViewById(R.id.btnArea);
+        btnBorrarPerimetro = v.findViewById(R.id.btnBorrarPerimetro);
+        btnBorrarArea = v.findViewById(R.id.btnBorrarArea);
+        // Spinners
+        spUnidadPerimetro = v.findViewById(R.id.unidadPerimetro);
+        spUnidadArea = v.findViewById(R.id.unidadArea);
+
+        /*
+         * Funcionamiento de las pantallas
+         */
+
+        String [] unidadesPerimetro = {"cm", "m", "km"};
+        String [] unidadesArea = {"cm", "m", "km"};
+        ArrayAdapter <String> upAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, unidadesPerimetro);
+        spUnidadPerimetro.setAdapter(upAdapter);
+        ArrayAdapter <String> uaAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, unidadesArea);
+        spUnidadArea.setAdapter(uaAdapter);
+
+        // Botón del PERÍMETRO
+        btnPerimetro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                unidadPerimetro = spUnidadPerimetro.getSelectedItem().toString();
+                if (txtLado1.length() == 0 || txtLado2.length() == 0 || txtLado3.length() == 0 || unidadPerimetro.length() == 0) {
+                    tvPerimetro.setText("Faltan datos");
+                    //tvPerimetro.setTextColor(Integer.parseInt("red"));
+                } else {
+                    DecimalFormat decimalFormat = new DecimalFormat("#0.0000");
+                    lado1 = Double.parseDouble(txtLado1.getText().toString());
+                    lado2 = Double.parseDouble(txtLado2.getText().toString());
+                    lado3 = Double.parseDouble(txtLado3.getText().toString());
+                    //unidadPerimetro = unidad.toString();
+                    if (unidadPerimetro.equals("cm") || unidadPerimetro.equals("m") || unidadPerimetro.equals("km")) {
+                        perimetro = lado1 + lado2 + lado3;
+                        //tvPerimetro.setTextColor(Integer.parseInt("black"));
+                        tvPerimetro.setText("Perímetro \n" + decimalFormat.format(perimetro) + " " + unidadPerimetro);
+                    } else {
+                        //tvPerimetro.setTextColor(Integer.parseInt("red"));
+                        tvPerimetro.setText("UNIDAD NO VÁLIDA");
+                    }
+                }
+            }
+        });
 
         return v;
     }
