@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.circle.CircleFragment">
+    tools:context=".ui.esfera.EsferaFragment">
 
     <TabHost
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                 android:layout_height="match_parent"
                 android:id="@android:id/tabcontent">
 
-                <!-- PERÍMETRO -->
+                <!-- ÁREA -->
                 <LinearLayout
                     android:id="@+id/pest1"
                     android:layout_width="match_parent"
@@ -42,8 +42,8 @@
                             android:id="@+id/imageView"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
-                            android:layout_marginTop="56dp"
-                            android:src="@drawable/ic_circle"
+                            android:layout_marginTop="35dp"
+                            android:src="@drawable/ic_esfera"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.498"
                             app:layout_constraintStart_toStartOf="parent"
@@ -65,105 +65,6 @@
                             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
                         <EditText
-                            android:id="@+id/txtRadioPerimetro"
-                            android:layout_width="200dp"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="30dp"
-                            android:ems="10"
-                            android:hint="Valor del radio"
-                            android:inputType="numberDecimal"
-                            android:textAlignment="center"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/instruccion" />
-
-                        <Button
-                            android:id="@+id/btnBorrarPerimetro"
-                            android:layout_width="155dp"
-                            android:layout_height="60dp"
-                            android:layout_marginTop="28dp"
-                            android:layout_marginEnd="35dp"
-                            android:drawableLeft="@drawable/ic_delete"
-                            android:text="Borrar"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/unidadPerimetro" />
-
-                        <Button
-                            android:id="@+id/btnCalcularPerimetro"
-                            android:layout_width="155dp"
-                            android:layout_height="60dp"
-                            android:layout_marginTop="28dp"
-                            android:layout_marginStart="35dp"
-                            android:drawableLeft="@drawable/ic_calculate"
-                            android:text="Calcular"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/unidadPerimetro" />
-
-                        <TextView
-                            android:id="@+id/tvPerimetro"
-                            android:layout_width="300dp"
-                            android:layout_height="50dp"
-                            android:layout_marginTop="50dp"
-                            android:text="hola"
-                            android:textAlignment="center"
-                            android:textColor="#000000"
-                            android:textSize="14dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.495"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/btnBorrarPerimetro" />
-
-                        <Spinner
-                            android:id="@+id/unidadPerimetro"
-                            android:layout_width="170dp"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="25dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/txtRadioPerimetro" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </LinearLayout>
-
-                <!-- ÁREA -->
-                <LinearLayout
-                    android:id="@+id/pest2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:layout_marginTop="56dp"
-                            android:src="@drawable/ic_circle"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.498"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/instruccion2"
-                            android:layout_width="260dp"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="30dp"
-                            android:fontFamily="monospace"
-                            android:text="Ingresa todos los datos solicitados de forma correcta y completa"
-                            android:textAlignment="center"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.496"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-                        <EditText
                             android:id="@+id/txtRadioArea"
                             android:layout_width="200dp"
                             android:layout_height="45dp"
@@ -174,7 +75,7 @@
                             android:textAlignment="center"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/instruccion2" />
+                            app:layout_constraintTop_toBottomOf="@+id/instruccion" />
 
                         <Button
                             android:id="@+id/btnBorrarArea"
@@ -220,6 +121,105 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/txtRadioArea" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <!-- VOLUMEN -->
+                <LinearLayout
+                    android:id="@+id/pest2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="35dp"
+                            android:src="@drawable/ic_esfera"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.498"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/instruccion2"
+                            android:layout_width="260dp"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="30dp"
+                            android:fontFamily="monospace"
+                            android:text="Ingresa todos los datos solicitados de forma correcta y completa"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.496"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+                        <EditText
+                            android:id="@+id/txtRadioVolumen"
+                            android:layout_width="200dp"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="30dp"
+                            android:ems="10"
+                            android:hint="Valor del radio"
+                            android:inputType="numberDecimal"
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/instruccion2" />
+
+                        <Button
+                            android:id="@+id/btnBorrarVolumen"
+                            android:layout_width="155dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="28dp"
+                            android:layout_marginEnd="35dp"
+                            android:drawableLeft="@drawable/ic_delete"
+                            android:text="Borrar"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/unidadVolumen" />
+
+                        <Button
+                            android:id="@+id/btnCalcularVolumen"
+                            android:layout_width="155dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="28dp"
+                            android:layout_marginStart="35dp"
+                            android:drawableLeft="@drawable/ic_calculate"
+                            android:text="Calcular"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/unidadVolumen" />
+
+                        <TextView
+                            android:id="@+id/tvVolumen"
+                            android:layout_width="300dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="50dp"
+                            android:text="hola"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.495"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/btnBorrarVolumen" />
+
+                        <Spinner
+                            android:id="@+id/unidadVolumen"
+                            android:layout_width="170dp"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="25dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtRadioVolumen" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 

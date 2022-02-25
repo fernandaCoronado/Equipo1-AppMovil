@@ -35,4 +35,25 @@
         </item>
     </group>
 
+    <group android:checkableBehavior="single">
+        <item android:title="Cuerpos geométricos">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_cubo"
+                        android:icon="@drawable/ic_cubo"
+                        android:title="Cubo" />
+                    <item
+                        android:id="@+id/nav_cilindro"
+                        android:icon="@drawable/ic_cilindro"
+                        android:title="Cilindro" />
+                    <item
+                        android:id="@+id/nav_esfera"
+                        android:icon="@drawable/ic_esfera"
+                        android:title="Esfera" />
+                </group>
+            </menu>
+        </item>
+    </group>
+
 </menu>

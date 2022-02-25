@@ -1,4 +1,4 @@
-package com.example.imath.ui.circle;
+package com.example.imath.ui.esfera;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -15,31 +15,31 @@ import android.widget.TabHost;
 
 import com.example.imath.R;
 
-public class CircleFragment extends Fragment {
+public class EsferaFragment extends Fragment {
 
-    private CircleViewModel mViewModel;
+    private EsferaViewModel mViewModel;
 
-    public static CircleFragment newInstance() {
-        return new CircleFragment();
+    public static EsferaFragment newInstance() {
+        return new EsferaFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        // return inflater.inflate(R.layout.circle_fragment, container, false);
-        View v = inflater.inflate(R.layout.circle_fragment, container, false);
+        // return inflater.inflate(R.layout.esfera_fragment, container, false);
+        View v = inflater.inflate(R.layout.esfera_fragment, container, false);
 
         TabHost tabs = v.findViewById(android.R.id.tabhost);
         tabs.setup();
 
         TabHost.TabSpec spec = tabs.newTabSpec("pest1");
         spec.setContent(R.id.pest1);
-        spec.setIndicator("Perímetro", getResources().getDrawable(R.drawable.ic_circle));
+        spec.setIndicator("Área", getResources().getDrawable(R.drawable.ic_esfera));
         tabs.addTab(spec);
 
         spec = tabs.newTabSpec("pest2");
         spec.setContent(R.id.pest2);
-        spec.setIndicator("Área", getResources().getDrawable(R.drawable.ic_circle));
+        spec.setIndicator("Volumen", getResources().getDrawable(R.drawable.ic_esfera));
         tabs.addTab(spec);
 
         tabs.setCurrentTab(0);
@@ -50,7 +50,7 @@ public class CircleFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(CircleViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(EsferaViewModel.class);
         // TODO: Use the ViewModel
     }
 

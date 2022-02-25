@@ -35,4 +35,22 @@
         android:label="Cículo"
         tools:layout="@layout/circle_fragment" />
 
+    <fragment
+        android:id="@+id/nav_cubo"
+        android:name="com.example.imath.ui.cubo.CuboFragment"
+        android:label="Cubo"
+        tools:layout="@layout/cubo_fragment" />
+
+    <fragment
+        android:id="@+id/nav_cilindro"
+        android:name="com.example.imath.ui.cilindro.CilindroFragment"
+        android:label="Cilindro"
+        tools:layout="@layout/cilindro_fragment" />
+
+    <fragment
+        android:id="@+id/nav_esfera"
+        android:name="com.example.imath.ui.esfera.EsferaFragment"
+        android:label="Esfera"
+        tools:layout="@layout/esfera_fragment" />
+
 </navigation>
