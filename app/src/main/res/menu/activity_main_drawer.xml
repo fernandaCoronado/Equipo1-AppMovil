@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
@@ -10,10 +11,20 @@
     </group>
 
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_triangle"
-            android:icon="@drawable/ic_triangulo"
-            android:title="Triángulo" />
+        <item android:title="Figuras geométricas">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_triangle"
+                        android:icon="@drawable/ic_triangulo"
+                        android:title="Triángulo" />
+                    <item
+                        android:id="@+id/nav_square"
+                        android:icon="@drawable/ic_square"
+                        android:title="Cuadrado" />
+                </group>
+            </menu>
+        </item>
     </group>
 
 </menu>
