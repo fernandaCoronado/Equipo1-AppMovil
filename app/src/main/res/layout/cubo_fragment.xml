@@ -18,9 +18,10 @@
             android:orientation="vertical">
 
             <TabWidget
+                android:id="@android:id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@android:id/tabs"/>
+                android:background="#C4D4EB" />
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -36,7 +37,8 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:background="@drawable/fondo_dise">
 
                         <ImageView
                             android:id="@+id/imageView"
@@ -54,7 +56,7 @@
                             android:layout_width="260dp"
                             android:layout_height="45dp"
                             android:layout_marginTop="30dp"
-                            android:fontFamily="monospace"
+                            android:fontFamily="sans-serif-black"
                             android:text="Ingresa todos los datos solicitados de forma correcta y completa"
                             android:textAlignment="center"
                             android:textSize="12sp"
@@ -92,8 +94,8 @@
                             android:id="@+id/btnCalcularArea"
                             android:layout_width="155dp"
                             android:layout_height="60dp"
-                            android:layout_marginTop="28dp"
                             android:layout_marginStart="35dp"
+                            android:layout_marginTop="28dp"
                             android:drawableLeft="@drawable/ic_calculate"
                             android:text="Calcular"
                             app:layout_constraintStart_toStartOf="parent"
@@ -131,6 +133,7 @@
                     android:id="@+id/pest2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/fondo_dise"
                     android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -153,7 +156,7 @@
                             android:layout_width="260dp"
                             android:layout_height="45dp"
                             android:layout_marginTop="30dp"
-                            android:fontFamily="monospace"
+                            android:fontFamily="sans-serif-black"
                             android:text="Ingresa todos los datos solicitados de forma correcta y completa"
                             android:textAlignment="center"
                             android:textSize="12sp"
@@ -191,8 +194,8 @@
                             android:id="@+id/btnCalcularVolumen"
                             android:layout_width="155dp"
                             android:layout_height="60dp"
-                            android:layout_marginTop="28dp"
                             android:layout_marginStart="35dp"
+                            android:layout_marginTop="28dp"
                             android:drawableLeft="@drawable/ic_calculate"
                             android:text="Calcular"
                             app:layout_constraintStart_toStartOf="parent"

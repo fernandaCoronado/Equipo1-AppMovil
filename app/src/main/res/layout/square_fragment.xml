@@ -18,9 +18,10 @@
             android:orientation="vertical">
 
             <TabWidget
+                android:id="@android:id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@android:id/tabs"/>
+                android:background="#C4D4EB" />
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -36,14 +37,15 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:background="@drawable/fondo_dise">
 
                         <TextView
                             android:id="@+id/instruccion"
                             android:layout_width="260dp"
                             android:layout_height="45dp"
                             android:layout_marginTop="30dp"
-                            android:fontFamily="monospace"
+                            android:fontFamily="sans-serif-black"
                             android:text="Ingresa todos los datos solicitados de forma correcta y completa"
                             android:textAlignment="center"
                             android:textSize="12sp"
@@ -82,8 +84,8 @@
                             android:id="@+id/btnBorrarPerimetro"
                             android:layout_width="155dp"
                             android:layout_height="60dp"
-                            android:layout_marginEnd="40dp"
                             android:layout_marginTop="22dp"
+                            android:layout_marginEnd="40dp"
                             android:drawableLeft="@drawable/ic_delete"
                             android:text="Borrar"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -147,6 +149,7 @@
                     android:id="@+id/pest2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/fondo_dise"
                     android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -158,7 +161,7 @@
                             android:layout_width="260dp"
                             android:layout_height="45dp"
                             android:layout_marginTop="30dp"
-                            android:fontFamily="monospace"
+                            android:fontFamily="sans-serif-black"
                             android:text="Ingresa todos los datos solicitados de forma correcta y completa"
                             android:textAlignment="center"
                             android:textSize="12sp"
@@ -197,8 +200,8 @@
                             android:id="@+id/btnBorrarArea"
                             android:layout_width="155dp"
                             android:layout_height="60dp"
-                            android:layout_marginEnd="40dp"
                             android:layout_marginTop="22dp"
+                            android:layout_marginEnd="40dp"
                             android:drawableLeft="@drawable/ic_delete"
                             android:text="Borrar"
                             app:layout_constraintEnd_toEndOf="parent"
