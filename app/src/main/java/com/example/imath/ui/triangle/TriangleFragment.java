@@ -86,6 +86,8 @@ public class TriangleFragment extends Fragment {
         // Spinners
         spUnidadPerimetro = v.findViewById(R.id.unidadPerimetro);
         spUnidadArea = v.findViewById(R.id.unidadArea);
+        // Formato números
+        DecimalFormat decimalFormat = new DecimalFormat("#0.0000");
 
         /*
          * Funcionamiento de las pantallas
@@ -107,7 +109,6 @@ public class TriangleFragment extends Fragment {
                     tvPerimetro.setText("Faltan datos");
                     //tvPerimetro.setTextColor(Integer.parseInt("red"));
                 } else {
-                    DecimalFormat decimalFormat = new DecimalFormat("#0.0000");
                     lado1 = Double.parseDouble(txtLado1.getText().toString());
                     lado2 = Double.parseDouble(txtLado2.getText().toString());
                     lado3 = Double.parseDouble(txtLado3.getText().toString());
@@ -121,6 +122,51 @@ public class TriangleFragment extends Fragment {
                         tvPerimetro.setText("UNIDAD NO VÁLIDA");
                     }
                 }
+            }
+        });
+
+        // Botón de borrar PERÍMETRO
+        btnBorrarPerimetro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txtLado1.setText("");
+                txtLado2.setText("");
+                txtLado3.setText("");
+                tvPerimetro.setText("");
+            }
+        });
+
+        // Botón del ÁREA
+        btnArea.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                unidadArea = spUnidadArea.getSelectedItem().toString();
+                if (txtBase.length() == 0 || txtAltura.length() == 0) {
+                    tvArea.setText("Faltan datos");
+                    //tvPerimetro.setTextColor(Integer.parseInt("red"));
+                } else {
+                    base = Double.parseDouble(txtBase.getText().toString());
+                    altura = Double.parseDouble(txtAltura.getText().toString());
+                    //unidadPerimetro = unidad.toString();
+                    if (unidadArea.equals("cm") || unidadArea.equals("m") || unidadArea.equals("km")) {
+                        area = base * altura / 2;
+                        //tvPerimetro.setTextColor(Integer.parseInt("black"));
+                        tvArea.setText("Área \n" + decimalFormat.format(area) + " " + unidadArea + "²");
+                    } else {
+                        //tvPerimetro.setTextColor(Integer.parseInt("red"));
+                        tvArea.setText("UNIDAD NO VÁLIDA");
+                    }
+                }
+            }
+        });
+
+        // Botón de borrar ÁREA
+        btnBorrarArea.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txtBase.setText("");
+                txtAltura.setText("");
+                tvArea.setText("");
             }
         });
 
