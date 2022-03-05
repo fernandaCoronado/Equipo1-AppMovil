@@ -77,9 +77,12 @@ public class TriangleFragment extends Fragment {
         txtBase = v.findViewById(R.id.txtBase);
         txtAltura = v.findViewById(R.id.txtAltura);
 
+        // Se agregan automáticamente comas (,) cada mil
         txtLado1.addTextChangedListener(new NumberTextWatcher(txtLado1));
         txtLado2.addTextChangedListener(new NumberTextWatcher(txtLado2));
         txtLado3.addTextChangedListener(new NumberTextWatcher(txtLado3));
+        txtBase.addTextChangedListener(new NumberTextWatcher(txtBase));
+        txtAltura.addTextChangedListener(new NumberTextWatcher(txtAltura));
 
         // TextView
         tvPerimetro = v.findViewById(R.id.tvPerimetro);
@@ -93,14 +96,15 @@ public class TriangleFragment extends Fragment {
         spUnidadPerimetro = v.findViewById(R.id.unidadPerimetro);
         spUnidadArea = v.findViewById(R.id.unidadArea);
         // Formato números
-        DecimalFormat decimalFormat = new DecimalFormat("#0,000.0000");
+        final DecimalFormat[] decimalFormat = new DecimalFormat[1];
+
 
         /*
          * Funcionamiento de las pantallas
          */
 
-        String [] unidadesPerimetro = {"cm", "m", "km"};
-        String [] unidadesArea = {"cm", "m", "km"};
+        String [] unidadesPerimetro = {"Unidad", "cm", "m", "km"};
+        String [] unidadesArea = {"Unidad", "cm", "m", "km"};
         ArrayAdapter <String> upAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, unidadesPerimetro);
         spUnidadPerimetro.setAdapter(upAdapter);
         ArrayAdapter <String> uaAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, unidadesArea);
@@ -112,35 +116,33 @@ public class TriangleFragment extends Fragment {
             public void onClick(View view) {
                 unidadPerimetro = spUnidadPerimetro.getSelectedItem().toString();
                 if (txtLado1.length() == 0 || txtLado2.length() == 0 || txtLado3.length() == 0 || unidadPerimetro.length() == 0) {
-                    // tvPerimetro.setText("Faltan datos");
-                    //tvPerimetro.setTextColor(Integer.parseInt("red"));
                     if (txtLado1.length() == 0) {
-                        //tvErrorL1.setVisibility(View.VISIBLE);
-                        txtLado1.setError("El campo no puede quedar vacío");
+                        txtLado1.setError("Faltan datos");
                         txtLado1.requestFocus();
                     }
                     if (txtLado2.length() == 0) {
-                        //tvErrorL2.setVisibility(View.VISIBLE);
-                        txtLado2.setError("El campo no puede quedar vacío");
+                        txtLado2.setError("Faltan datos");
                         txtLado2.requestFocus();
                     }
                     if (txtLado3.length() == 0) {
-                        //tvErrorL3.setVisibility(View.VISIBLE);
-                        txtLado3.setError("El campo no puede quedar vacío");
+                        txtLado3.setError("Faltan datos");
                         txtLado3.requestFocus();
                     }
                 } else {
+                    // Con ".replace(",", "")" se borra la coma (,) agregada anteriormente
                     lado1 = Double.parseDouble(txtLado1.getText().toString().replace(",", ""));
                     lado2 = Double.parseDouble(txtLado2.getText().toString().replace(",", ""));
                     lado3 = Double.parseDouble(txtLado3.getText().toString().replace(",", ""));
-                    //unidadPerimetro = unidad.toString();
                     if (unidadPerimetro.equals("cm") || unidadPerimetro.equals("m") || unidadPerimetro.equals("km")) {
                         perimetro = lado1 + lado2 + lado3;
-                        // tvPerimetro.setTextColor(Integer.parseInt("black"));
-                        tvPerimetro.setText("Perímetro \n" + decimalFormat.format(perimetro) + " " + unidadPerimetro);
-                        // tvPerimetro.setText(txtLado1.getText());
+                        if (perimetro >= 1000) {
+                            decimalFormat[0] = new DecimalFormat("#0,000.0000");
+                            tvPerimetro.setText("Perímetro \n" + decimalFormat[0].format(perimetro) + " " + unidadPerimetro);
+                        } else {
+                            decimalFormat[0] = new DecimalFormat("#0.0000");
+                            tvPerimetro.setText("Perímetro \n" + decimalFormat[0].format(perimetro) + " " + unidadPerimetro);
+                        }
                     } else {
-                        // tvPerimetro.setTextColor(Integer.parseInt("red"));
                         tvPerimetro.setText("UNIDAD NO VÁLIDA");
                     }
                 }
@@ -164,18 +166,29 @@ public class TriangleFragment extends Fragment {
             public void onClick(View view) {
                 unidadArea = spUnidadArea.getSelectedItem().toString();
                 if (txtBase.length() == 0 || txtAltura.length() == 0) {
-                    tvArea.setText("Faltan datos");
-                    //tvPerimetro.setTextColor(Integer.parseInt("red"));
+                    // Mensajes de error
+                    if (txtBase.length() == 0) {
+                        txtBase.setError("Faltan datos");
+                        txtBase.requestFocus();
+                    }
+                    if (txtAltura.length() == 0) {
+                        txtAltura.setError("Faltan datos");
+                        txtAltura.requestFocus();
+                    }
                 } else {
-                    base = Double.parseDouble(txtBase.getText().toString());
-                    altura = Double.parseDouble(txtAltura.getText().toString());
-                    //unidadPerimetro = unidad.toString();
+                    // Con ".replace(",", "")" se borra la coma (,) agregada anteriormente
+                    base = Double.parseDouble(txtBase.getText().toString().replace(",", ""));
+                    altura = Double.parseDouble(txtAltura.getText().toString().replace(",", ""));
                     if (unidadArea.equals("cm") || unidadArea.equals("m") || unidadArea.equals("km")) {
                         area = base * altura / 2;
-                        //tvPerimetro.setTextColor(Integer.parseInt("black"));
-                        tvArea.setText("Área \n" + decimalFormat.format(area) + " " + unidadArea + "²");
+                        if (area >= 1000) {
+                            decimalFormat[0] = new DecimalFormat("#0,000.0000");
+                            tvArea.setText("Área \n" + decimalFormat[0].format(area) + " " + unidadArea + "²");
+                        } else {
+                            decimalFormat[0] = new DecimalFormat("#0.0000");
+                            tvArea.setText("Área \n" + decimalFormat[0].format(area) + " " + unidadArea + "²");
+                        }
                     } else {
-                        //tvPerimetro.setTextColor(Integer.parseInt("red"));
                         tvArea.setText("UNIDAD NO VÁLIDA");
                     }
                 }
