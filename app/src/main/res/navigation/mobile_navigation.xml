@@ -53,4 +53,88 @@
         android:label="Esfera"
         tools:layout="@layout/esfera_fragment" />
 
+    <fragment
+        android:id="@+id/nav_calcular_hipotenusa"
+        android:name="com.example.imath.ui.CalcularHipotenusa.CalcularHipotenusaFragment"
+        android:label="@string/menu_hipotenusa"
+        tools:layout="@layout/calcular_hipotenusa_fragment" />
+
+    <fragment
+        android:id="@+id/nav_calcular_cateto_a"
+        android:name="com.example.imath.ui.CalcularCatetoA.CalcularCatetoAFragment"
+        android:label="@string/menu_cateto_a"
+        tools:layout="@layout/calcular_cateto_a_fragment" />
+
+    <fragment
+        android:id="@+id/nav_calcular_cateto_b"
+        android:name="com.example.imath.ui.CalcularCatetoB.CalcularCatetoBFragment"
+        android:label="@string/menu_cateto_b"
+        tools:layout="@layout/calcular_cateto_b_fragment" />
+
+    <fragment
+        android:id="@+id/nav_suma_angulos"
+        android:name="com.example.imath.ui.SumaAngulos.SumaAngulosFragment"
+        android:label="@string/menu_suma_angulos"
+        tools:layout="@layout/suma_angulos_fragment" />
+
+    <fragment
+        android:id="@+id/nav_resta_angulos"
+        android:name="com.example.imath.ui.RestaAngulos.RestaAngulosFragment"
+        android:label="@string/menu_resta_angulos"
+        tools:layout="@layout/resta_angulos_fragment" />
+
+    <fragment
+        android:id="@+id/nav_multiplicacion_angulos"
+        android:name="com.example.imath.ui.MultiplicacionAngulos.MultiplicacionAngulosFragment"
+        android:label="@string/menu_multiplicar_angulos"
+        tools:layout="@layout/multiplicacion_angulos_fragment" />
+
+    <fragment
+        android:id="@+id/nav_dividir_angulos"
+        android:name="com.example.imath.ui.DivisionAngulos.DivisionAngulosFragment"
+        android:label="@string/menu_dividir_angulos"
+        tools:layout="@layout/division_angulos_fragment" />
+
+    <fragment
+        android:id="@+id/nav_convertir_grados"
+        android:name="com.example.imath.ui.ConvertirGrados.ConvertirGradosFragment"
+        android:label="@string/menu_grados"
+        tools:layout="@layout/convertir_grados_fragment" />
+
+    <fragment
+        android:id="@+id/nav_convertir_minutos"
+        android:name="com.example.imath.ui.ConvertirMinutos.ConvertirMinutosFragment"
+        android:label="@string/menu_minutos"
+        tools:layout="@layout/convertir_minutos_fragment" />
+
+    <fragment
+        android:id="@+id/nav_convertir_segundos"
+        android:name="com.example.imath.ui.ConvertirSegundos.ConvertirSegundosFragment"
+        android:label="@string/menu_segundos"
+        tools:layout="@layout/convertir_segundos_fragment" />
+
+    <fragment
+        android:id="@+id/nav_convertir_combinados"
+        android:name="com.example.imath.ui.ConvertirCombinados.ConvertirCombinadosFragment"
+        android:label="@string/menu_combinados"
+        tools:layout="@layout/convertir_combinados_fragment" />
+
+    <fragment
+        android:id="@+id/nav_grados_to_gms"
+        android:name="com.example.imath.ui.GradosToGMS.GradosToGMSFragment"
+        android:label="@string/menu_grados_to_gms"
+        tools:layout="@layout/grados_to_g_m_fragment" />
+
+    <fragment
+        android:id="@+id/nav_grados_to_radianes"
+        android:name="com.example.imath.ui.GradosToRadianes.GradosToRadianesFragment"
+        android:label="@string/menu_grados_to_radianes"
+        tools:layout="@layout/grados_to_radianes_fragment" />
+
+    <fragment
+        android:id="@+id/nav_gms_to_radianes"
+        android:name="com.example.imath.ui.GMSToRadianes.GMSToRadianesFragment"
+        android:label="@string/menu_gms_to_radianes"
+        tools:layout="@layout/g_m_s_to_radianes_fragment" />
+
 </navigation>

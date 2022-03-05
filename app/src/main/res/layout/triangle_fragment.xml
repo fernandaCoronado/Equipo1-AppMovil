@@ -63,7 +63,8 @@
                             android:ems="10"
                             android:hint="Valor del lado 1"
                             android:inputType="numberDecimal"
-                            android:textAlignment="center"
+                            android:textAlignment="textEnd"
+                            android:paddingRight="15dp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/instruccion" />
 
@@ -76,7 +77,8 @@
                             android:ems="10"
                             android:hint="Valor del lado 2"
                             android:inputType="numberDecimal"
-                            android:textAlignment="center"
+                            android:textAlignment="textEnd"
+                            android:paddingRight="15dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/instruccion" />
 
@@ -89,7 +91,8 @@
                             android:ems="10"
                             android:hint="Valor del lado 3"
                             android:inputType="numberDecimal"
-                            android:textAlignment="center"
+                            android:textAlignment="textEnd"
+                            android:paddingRight="15dp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/txtLado1" />
 
@@ -190,7 +193,8 @@
                             android:ems="10"
                             android:hint="Base del triángulo"
                             android:inputType="numberDecimal"
-                            android:textAlignment="center"
+                            android:textAlignment="textEnd"
+                            android:paddingRight="15dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/instruccion2" />
@@ -203,7 +207,8 @@
                             android:ems="10"
                             android:hint="Altura del triángulo"
                             android:inputType="numberDecimal"
-                            android:textAlignment="center"
+                            android:textAlignment="textEnd"
+                            android:paddingRight="15dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/txtBase" />

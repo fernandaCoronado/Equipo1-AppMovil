@@ -56,4 +56,78 @@
         </item>
     </group>
 
+    <group android:checkableBehavior="single">
+        <item android:title="Teorema de Pitágoras">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_calcular_hipotenusa"
+                        android:icon="@drawable/ic_pythagoras"
+                        android:title="@string/menu_hipotenusa" />
+                    <item
+                        android:id="@+id/nav_calcular_cateto_a"
+                        android:icon="@drawable/ic_pythagoras"
+                        android:title="@string/menu_cateto_a" />
+                    <item
+                        android:id="@+id/nav_calcular_cateto_b"
+                        android:icon="@drawable/ic_pythagoras"
+                        android:title="@string/menu_cateto_b" />
+                </group>
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Ángulos">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_suma_angulos"
+                        android:icon="@drawable/ic_suma"
+                        android:title="@string/menu_suma_angulos" />
+                    <item
+                        android:id="@+id/nav_resta_angulos"
+                        android:icon="@drawable/ic_restar"
+                        android:title="@string/menu_resta_angulos" />
+                    <item
+                        android:id="@+id/nav_multiplicacion_angulos"
+                        android:icon="@drawable/ic_multiplicar"
+                        android:title="@string/menu_multiplicar_angulos" />
+                    <item
+                        android:id="@+id/nav_dividir_angulos"
+                        android:icon="@drawable/ic_dividir"
+                        android:title="@string/menu_dividir_angulos" />
+                    <item
+                        android:id="@+id/nav_convertir_grados"
+                        android:icon="@drawable/ic_convertir"
+                        android:title="@string/menu_grados" />
+                    <item
+                        android:id="@+id/nav_convertir_minutos"
+                        android:icon="@drawable/ic_convertir"
+                        android:title="@string/menu_minutos" />
+                    <item
+                        android:id="@+id/nav_convertir_segundos"
+                        android:icon="@drawable/ic_convertir"
+                        android:title="@string/menu_segundos" />
+                    <item
+                        android:id="@+id/nav_convertir_combinados"
+                        android:icon="@drawable/ic_convertir"
+                        android:title="@string/menu_combinados" />
+                    <item
+                        android:id="@+id/nav_grados_to_gms"
+                        android:icon="@drawable/ic_convertir"
+                        android:title="@string/menu_grados_to_gms" />
+                    <item
+                        android:id="@+id/nav_grados_to_radianes"
+                        android:icon="@drawable/ic_convertir"
+                        android:title="@string/menu_grados_to_radianes" />
+                    <item
+                        android:id="@+id/nav_gms_to_radianes"
+                        android:icon="@drawable/ic_convertir"
+                        android:title="@string/menu_gms_to_radianes" />
+                </group>
+            </menu>
+        </item>
+    </group>
+
 </menu>

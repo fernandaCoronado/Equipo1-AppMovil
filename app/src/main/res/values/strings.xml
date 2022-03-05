@@ -10,4 +10,21 @@
     <string name="menu_home">Inicio</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+    <string name="menu_hipotenusa">Calcular hipotenusa</string>
+    <string name="menu_cateto_a">Calcular cateto A</string>
+    <string name="menu_cateto_b">Calcular cateto B</string>
+
+    <string name="menu_grados">Convertir grados</string>
+    <string name="menu_minutos">Convertir minutos</string>
+    <string name="menu_segundos">Convertir segundos</string>
+    <string name="menu_combinados">Convertir combinados</string>
+    <string name="menu_grados_to_gms">Convertir grados a G/M/S</string>
+    <string name="menu_grados_to_radianes">Convertir grados a radianes</string>
+    <string name="menu_gms_to_radianes">Convertir G/M/S a radianes</string>
+    <string name="menu_suma_angulos">Sumar ángulos</string>
+    <string name="menu_resta_angulos">Restar ángulos</string>
+    <string name="menu_multiplicar_angulos">Multiplicar ángulos</string>
+    <string name="menu_dividir_angulos">Dividir ángulos</string>
+
 </resources>
