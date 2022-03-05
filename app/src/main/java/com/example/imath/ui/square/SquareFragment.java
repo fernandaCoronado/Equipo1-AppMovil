@@ -18,6 +18,7 @@ import android.widget.Spinner;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import com.example.imath.NumberTextWatcher;
 import com.example.imath.R;
 
 import java.text.DecimalFormat;
@@ -67,6 +68,11 @@ public class SquareFragment extends Fragment {
         // Cajas de texto
         txtLadoPerimetro = v.findViewById(R.id.txtLadoPerimetro);
         txtLadoArea = v.findViewById(R.id.txtLadoArea);
+
+        // Se agregan automáticamente comas (,) cada mil
+        txtLadoPerimetro.addTextChangedListener(new NumberTextWatcher(txtLadoPerimetro));
+        txtLadoArea.addTextChangedListener(new NumberTextWatcher(txtLadoArea));
+
         // TextView
         tvPerimetro = v.findViewById(R.id.tvPerimetro);
         tvArea = v.findViewById(R.id.tvArea);
@@ -79,14 +85,14 @@ public class SquareFragment extends Fragment {
         spUnidadPerimetro = v.findViewById(R.id.unidadPerimetro);
         spUnidadArea = v.findViewById(R.id.unidadArea);
         // Formato números
-        DecimalFormat decimalFormat = new DecimalFormat("#0.0000");
+        final DecimalFormat[] decimalFormat = new DecimalFormat[1];
 
         /*
          * Funcionamiento de las pantallas
          */
 
-        String [] unidadesPerimetro = {"cm", "m", "km"};
-        String [] unidadesArea = {"cm", "m", "km"};
+        String [] unidadesPerimetro = {"Unidad", "cm", "m", "km"};
+        String [] unidadesArea = {"Unidad", "cm", "m", "km"};
         ArrayAdapter<String> upAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, unidadesPerimetro);
         spUnidadPerimetro.setAdapter(upAdapter);
         ArrayAdapter <String> uaAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, unidadesArea);
@@ -98,17 +104,20 @@ public class SquareFragment extends Fragment {
             public void onClick(View view) {
                 unidadPerimetro = spUnidadPerimetro.getSelectedItem().toString();
                 if (txtLadoPerimetro.length() == 0) {
-                    tvPerimetro.setText("Faltan datos");
-                    //tvPerimetro.setTextColor(Integer.parseInt("red"));
+                    txtLadoPerimetro.setError("Faltan datos");
+                    txtLadoPerimetro.requestFocus();
                 } else {
-                    ladoPerimetro = Double.parseDouble(txtLadoPerimetro.getText().toString());
-                    //unidadPerimetro = unidad.toString();
+                    ladoPerimetro = Double.parseDouble(txtLadoPerimetro.getText().toString().replace(",", ""));
                     if (unidadPerimetro.equals("cm") || unidadPerimetro.equals("m") || unidadPerimetro.equals("km")) {
                         perimetro = ladoPerimetro * 4;
-                        //tvPerimetro.setTextColor(Integer.parseInt("black"));
-                        tvPerimetro.setText("Perímetro \n" + decimalFormat.format(perimetro) + " " + unidadPerimetro);
+                        if (perimetro >= 1000) {
+                            decimalFormat[0] = new DecimalFormat("#0,000.0000");
+                            tvPerimetro.setText("Perímetro \n" + decimalFormat[0].format(perimetro) + " " + unidadPerimetro);
+                        } else {
+                            decimalFormat[0] = new DecimalFormat("#0.0000");
+                            tvPerimetro.setText("Perímetro \n" + decimalFormat[0].format(perimetro) + " " + unidadPerimetro);
+                        }
                     } else {
-                        //tvPerimetro.setTextColor(Integer.parseInt("red"));
                         tvPerimetro.setText("UNIDAD NO VÁLIDA");
                     }
                 }
@@ -130,17 +139,20 @@ public class SquareFragment extends Fragment {
             public void onClick(View view) {
                 unidadArea = spUnidadArea.getSelectedItem().toString();
                 if (txtLadoArea.length() == 0) {
-                    tvArea.setText("Faltan datos");
-                    //tvPerimetro.setTextColor(Integer.parseInt("red"));
+                    txtLadoPerimetro.setError("Faltan datos");
+                    txtLadoPerimetro.requestFocus();
                 } else {
-                    ladoArea = Double.parseDouble(txtLadoArea.getText().toString());
-                    //unidadPerimetro = unidad.toString();
+                    ladoArea = Double.parseDouble(txtLadoArea.getText().toString().replace(",", ""));
                     if (unidadArea.equals("cm") || unidadArea.equals("m") || unidadArea.equals("km")) {
                         area = ladoArea * ladoArea;
-                        //tvPerimetro.setTextColor(Integer.parseInt("black"));
-                        tvArea.setText("Área \n" + decimalFormat.format(area) + " " + unidadArea + "²");
+                        if (area >= 1000) {
+                            decimalFormat[0] = new DecimalFormat("#0,000.0000");
+                            tvArea.setText("Área \n" + decimalFormat[0].format(area) + " " + unidadArea + "²");
+                        } else {
+                            decimalFormat[0] = new DecimalFormat("#0.0000");
+                            tvArea.setText("Área \n" + decimalFormat[0].format(area) + " " + unidadArea + "²");
+                        }
                     } else {
-                        //tvPerimetro.setTextColor(Integer.parseInt("red"));
                         tvArea.setText("UNIDAD NO VÁLIDA");
                     }
                 }
