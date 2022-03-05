@@ -18,6 +18,7 @@ import android.widget.Spinner;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import com.example.imath.NumberTextWatcher;
 import com.example.imath.R;
 
 import java.text.DecimalFormat;
@@ -75,6 +76,11 @@ public class TriangleFragment extends Fragment {
         txtLado3 = v.findViewById(R.id.txtLado3);
         txtBase = v.findViewById(R.id.txtBase);
         txtAltura = v.findViewById(R.id.txtAltura);
+
+        txtLado1.addTextChangedListener(new NumberTextWatcher(txtLado1));
+        txtLado2.addTextChangedListener(new NumberTextWatcher(txtLado2));
+        txtLado3.addTextChangedListener(new NumberTextWatcher(txtLado3));
+
         // TextView
         tvPerimetro = v.findViewById(R.id.tvPerimetro);
         tvArea = v.findViewById(R.id.tvArea);
@@ -87,7 +93,7 @@ public class TriangleFragment extends Fragment {
         spUnidadPerimetro = v.findViewById(R.id.unidadPerimetro);
         spUnidadArea = v.findViewById(R.id.unidadArea);
         // Formato números
-        DecimalFormat decimalFormat = new DecimalFormat("#0.0000");
+        DecimalFormat decimalFormat = new DecimalFormat("#0,000.0000");
 
         /*
          * Funcionamiento de las pantallas
@@ -106,19 +112,35 @@ public class TriangleFragment extends Fragment {
             public void onClick(View view) {
                 unidadPerimetro = spUnidadPerimetro.getSelectedItem().toString();
                 if (txtLado1.length() == 0 || txtLado2.length() == 0 || txtLado3.length() == 0 || unidadPerimetro.length() == 0) {
-                    tvPerimetro.setText("Faltan datos");
+                    // tvPerimetro.setText("Faltan datos");
                     //tvPerimetro.setTextColor(Integer.parseInt("red"));
+                    if (txtLado1.length() == 0) {
+                        //tvErrorL1.setVisibility(View.VISIBLE);
+                        txtLado1.setError("El campo no puede quedar vacío");
+                        txtLado1.requestFocus();
+                    }
+                    if (txtLado2.length() == 0) {
+                        //tvErrorL2.setVisibility(View.VISIBLE);
+                        txtLado2.setError("El campo no puede quedar vacío");
+                        txtLado2.requestFocus();
+                    }
+                    if (txtLado3.length() == 0) {
+                        //tvErrorL3.setVisibility(View.VISIBLE);
+                        txtLado3.setError("El campo no puede quedar vacío");
+                        txtLado3.requestFocus();
+                    }
                 } else {
-                    lado1 = Double.parseDouble(txtLado1.getText().toString());
-                    lado2 = Double.parseDouble(txtLado2.getText().toString());
-                    lado3 = Double.parseDouble(txtLado3.getText().toString());
+                    lado1 = Double.parseDouble(txtLado1.getText().toString().replace(",", ""));
+                    lado2 = Double.parseDouble(txtLado2.getText().toString().replace(",", ""));
+                    lado3 = Double.parseDouble(txtLado3.getText().toString().replace(",", ""));
                     //unidadPerimetro = unidad.toString();
                     if (unidadPerimetro.equals("cm") || unidadPerimetro.equals("m") || unidadPerimetro.equals("km")) {
                         perimetro = lado1 + lado2 + lado3;
-                        //tvPerimetro.setTextColor(Integer.parseInt("black"));
+                        // tvPerimetro.setTextColor(Integer.parseInt("black"));
                         tvPerimetro.setText("Perímetro \n" + decimalFormat.format(perimetro) + " " + unidadPerimetro);
+                        // tvPerimetro.setText(txtLado1.getText());
                     } else {
-                        //tvPerimetro.setTextColor(Integer.parseInt("red"));
+                        // tvPerimetro.setTextColor(Integer.parseInt("red"));
                         tvPerimetro.setText("UNIDAD NO VÁLIDA");
                     }
                 }
