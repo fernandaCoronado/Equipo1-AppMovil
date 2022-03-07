@@ -1,13 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.SumaAngulos.SumaAngulosFragment">
 
-    <TextView
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="365dp"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/fondo_dise">
+
+            <TextView
+                android:id="@+id/id_instruccion"
+                android:layout_width="258dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="52dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Ingresa todos los datos solicitados de forma correcta y completa"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+            <EditText
+                android:id="@+id/id_grados"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="64dp"
+                android:ems="10"
+                android:hint="Grados"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_instruccion" />
+
+            <EditText
+                android:id="@+id/id_minutos"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="64dp"
+                android:ems="10"
+                android:hint="Minutos"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toStartOf="@+id/id_segundos"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/id_grados"
+                app:layout_constraintTop_toBottomOf="@+id/id_instruccion" />
+
+            <EditText
+                android:id="@+id/id_segundos"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="40dp"
+                android:ems="10"
+                android:hint="Segundos"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_instruccion" />
+
+            <EditText
+                android:id="@+id/id_grados2"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:hint="Grados"
+                android:inputType="numberSigned"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_grados" />
+
+            <EditText
+                android:id="@+id/id_minutos2"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="84dp"
+                android:ems="10"
+                android:hint="Minutos"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toEndOf="@+id/id_grados2"
+                app:layout_constraintTop_toTopOf="@+id/id_minutos" />
+
+            <EditText
+                android:id="@+id/id_segundos2"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="36dp"
+                android:ems="10"
+                android:hint="Segundos"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.298"
+                app:layout_constraintStart_toEndOf="@+id/id_minutos2"
+                app:layout_constraintTop_toBottomOf="@+id/id_segundos" />
+
+            <Button
+                android:id="@+id/id_calcular"
+                android:layout_width="146dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="28dp"
+                android:text="Calcular"
+                app:icon="@drawable/ic_calculate"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_grados2"
+                app:layout_constraintVertical_bias="0.392" />
+
+            <Button
+                android:id="@+id/id_borrar"
+                android:layout_width="146dp"
+                android:layout_height="57dp"
+                android:text="BORRAR"
+                app:icon="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.266"
+                app:layout_constraintStart_toEndOf="@+id/id_calcular"
+                app:layout_constraintTop_toBottomOf="@+id/id_segundos2"
+                app:layout_constraintVertical_bias="0.393" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="140dp"
+                android:layout_height="101dp"
+                android:layout_marginTop="68dp"
+                android:src="@drawable/ic_suma"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </FrameLayout>

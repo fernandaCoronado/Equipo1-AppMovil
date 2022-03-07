@@ -1,13 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.DivisionAngulos.DivisionAngulosFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:orientation="vertical">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/fondo_dise">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="160dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="76dp"
+                android:src="@drawable/ic_dividir"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/id_instrucciones_div"
+                android:layout_width="267dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Ingresa todos los datos solicitados de forma correcta y completa"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+            <EditText
+                android:id="@+id/id_grados_div"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="68dp"
+                android:ems="10"
+                android:hint="Grados"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_div" />
+
+            <EditText
+                android:id="@+id/id_minutos_div"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="68dp"
+                android:ems="10"
+                android:hint="Minutos"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toEndOf="@+id/id_grados_div"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_div" />
+
+            <EditText
+                android:id="@+id/id_segundos_div"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="68dp"
+                android:layout_marginEnd="40dp"
+                android:ems="10"
+                android:hint="Segundos"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/id_minutos_div"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_div" />
+
+            <EditText
+                android:id="@+id/id_dividendo"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="88dp"
+                android:ems="10"
+                android:hint="Dividendo"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_segundos_div" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="82dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="56dp"
+                android:fontFamily="sans-serif-black"
+                android:text="/"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/id_dividendo"
+                app:layout_constraintHorizontal_bias="0.695"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_minutos_div"
+                tools:text="/" />
+
+            <Button
+                android:id="@+id/id_calcular_div"
+                android:layout_width="146dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="52dp"
+                android:text="CALCULAR"
+                app:icon="@drawable/ic_calculate"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:layout_constraintVertical_bias="0.251" />
+
+            <Button
+                android:id="@+id/id_eliminar_div"
+                android:layout_width="146dp"
+                android:layout_height="57dp"
+                android:text="BORRAR"
+                app:icon="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.179"
+                app:layout_constraintStart_toEndOf="@+id/id_calcular_div"
+                app:layout_constraintTop_toBottomOf="@+id/id_dividendo"
+                app:layout_constraintVertical_bias="0.237" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </FrameLayout>

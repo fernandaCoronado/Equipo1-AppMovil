@@ -1,13 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.ConvertirCombinados.ConvertirCombinadosFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:orientation="vertical">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/fondo_dise">
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="129dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="92dp"
+                android:src="@drawable/ic_convertir"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/id_instrucciones_comb"
+                android:layout_width="332dp"
+                android:layout_height="72dp"
+                android:layout_marginTop="56dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Ingresa todos los datos solicitados de forma correcta y completa"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.493"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+            <EditText
+                android:id="@+id/id_grados_comb"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:hint="Grados"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_comb" />
+
+            <EditText
+                android:id="@+id/id_minutos_comb"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:hint="Minutos"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toEndOf="@+id/id_grados_comb"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_comb" />
+
+            <EditText
+                android:id="@+id/id_segundos_comb"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:hint="Segundos"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.428"
+                app:layout_constraintStart_toEndOf="@+id/id_minutos_comb"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_comb" />
+
+            <Button
+                android:id="@+id/conv_grados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="Grados"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <Button
+                android:id="@+id/conv_segundos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="28dp"
+                android:text="Segundos"
+                app:layout_constraintStart_toEndOf="@+id/conv_minutos"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <Button
+                android:id="@+id/conv_minutos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="44dp"
+                android:text="MINUTOS"
+                app:layout_constraintStart_toEndOf="@+id/conv_grados"
+                app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+            <Button
+                android:id="@+id/id_eliminar_comb"
+                android:layout_width="146dp"
+                android:layout_height="57dp"
+                android:text="BORRAR"
+                app:icon="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/conv_minutos"
+                app:layout_constraintVertical_bias="0.315" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Convertir a:"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.46"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_minutos_comb" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </FrameLayout>

@@ -1,13 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.GradosToRadianes.GradosToRadianesFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:orientation="vertical">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/fondo_dise">
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="164dp"
+                android:layout_height="133dp"
+                android:layout_marginTop="72dp"
+                android:src="@drawable/ic_convertir"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/id_instrucciones_g_to_rad"
+                android:layout_width="332dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Ingresa todos los datos solicitados de forma correcta y completa"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.493"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+
+            <EditText
+                android:id="@+id/id_g_to_rad"
+                android:layout_width="202dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:hint="Grados"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_g_to_rad" />
+
+            <Button
+                android:id="@+id/id_conv_g_to_rad"
+                android:layout_width="155dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="16dp"
+                android:text="CONVERTIR"
+                app:icon="@drawable/ic_convertir"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_g_to_rad"
+                app:layout_constraintVertical_bias="0.123" />
+
+            <Button
+                android:id="@+id/id_eliminar_g_to_rad"
+                android:layout_width="155dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="16dp"
+                android:text="BORRAR"
+                app:icon="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.384"
+                app:layout_constraintStart_toEndOf="@+id/id_conv_g_to_rad"
+                app:layout_constraintTop_toBottomOf="@+id/id_g_to_rad"
+                app:layout_constraintVertical_bias="0.123" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </FrameLayout>

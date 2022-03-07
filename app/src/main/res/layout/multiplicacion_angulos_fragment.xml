@@ -1,13 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.MultiplicacionAngulos.MultiplicacionAngulosFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:orientation="vertical">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/fondo_dise">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="127dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="72dp"
+                android:src="@drawable/ic_multiplicar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/id_instrucciones_mul"
+                android:layout_width="290dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="72dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Ingresa todos los datos solicitados de forma correcta y completa"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+            <EditText
+                android:id="@+id/id_grados_mult"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:hint="Grados"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toStartOf="@+id/id_minutos_mult"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_mul" />
+
+            <EditText
+                android:id="@+id/id_minutos_mult"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:hint="Minutos"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toStartOf="@+id/id_segundos_mult"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_mul" />
+
+            <EditText
+                android:id="@+id/id_segundos_mult"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:hint="Segundos"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_mul" />
+
+            <EditText
+                android:id="@+id/id_cantidad"
+                android:layout_width="137dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="44dp"
+                android:ems="10"
+                android:hint="Multiplicador"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.748"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_minutos_mult" />
+
+            <TextView
+                android:id="@+id/id_x"
+                android:layout_width="74dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="104dp"
+                android:layout_marginTop="44dp"
+                android:fontFamily="sans-serif-black"
+                android:text="X"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_grados_mult" />
+
+            <Button
+                android:id="@+id/id_calcular_mult"
+                android:layout_width="146dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="56dp"
+                android:text="CALCULAR"
+                app:icon="@drawable/ic_calculate"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/id_eliminar_mult"
+                app:layout_constraintHorizontal_bias="0.031"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_x"
+                app:layout_constraintVertical_bias="0.298" />
+
+            <Button
+                android:id="@+id/id_eliminar_mult"
+                android:layout_width="146dp"
+                android:layout_height="57dp"
+                android:layout_marginEnd="36dp"
+                android:text="BORRAR"
+                app:icon="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_cantidad"
+                app:layout_constraintVertical_bias="0.319" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </FrameLayout>

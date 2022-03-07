@@ -1,13 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.CalcularCatetoA.CalcularCatetoAFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:orientation="vertical">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/fondo_dise">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="148dp"
+                android:layout_height="148dp"
+                android:layout_marginTop="64dp"
+                android:src="@drawable/ic_pythagoras"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.543"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/id_instrucciones_cata"
+                android:layout_width="322dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Ingresa todos los datos solicitados de forma correcta y completa"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+            <EditText
+                android:id="@+id/id_hipo_a"
+                android:layout_width="110dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="60dp"
+                android:ems="10"
+                android:hint="Hipotenusa"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_cata" />
+
+            <EditText
+                android:id="@+id/id_cateto_b"
+                android:layout_width="110dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="60dp"
+                android:ems="10"
+                android:hint="Cateto b"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toEndOf="@+id/id_hipo_a"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_cata" />
+
+            <Spinner
+                android:id="@+id/id_unidad"
+                android:layout_width="110dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.438"
+                app:layout_constraintStart_toEndOf="@+id/id_cateto_b"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_cata" />
+
+            <Button
+                android:id="@+id/id_calcular_cata"
+                android:layout_width="146dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="64dp"
+                android:text="CALCULAR"
+                app:icon="@drawable/ic_calculate"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_hipo_a"
+                app:layout_constraintVertical_bias="0.082" />
+
+            <Button
+                android:id="@+id/id_eliminar_cata"
+                android:layout_width="146dp"
+                android:layout_height="57dp"
+                android:text="BORRAR"
+                app:icon="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toEndOf="@+id/id_calcular_cata"
+                app:layout_constraintTop_toBottomOf="@+id/id_cateto_b"
+                app:layout_constraintVertical_bias="0.308" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </FrameLayout>

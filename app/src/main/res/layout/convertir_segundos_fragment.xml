@@ -1,13 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.ConvertirSegundos.ConvertirSegundosFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:orientation="vertical">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/fondo_dise">
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="152dp"
+                android:layout_height="138dp"
+                android:layout_marginTop="76dp"
+                android:src="@drawable/ic_convertir"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/id_instrucciones_seg"
+                android:layout_width="343dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Ingresa todos los datos solicitados de forma correcta y completa"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+            <EditText
+                android:id="@+id/id_conver_seg"
+                android:layout_width="202dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:hint="Segundos"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_seg" />
+
+            <TextView
+                android:id="@+id/id_text_seg"
+                android:layout_width="104dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Convertir a:"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_conver_seg" />
+
+            <Button
+                android:id="@+id/id_convgr_seg"
+                android:layout_width="146dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="4dp"
+                android:text="GRADOS"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_text_seg" />
+
+            <Button
+                android:id="@+id/id_convmin_seg"
+                android:layout_width="146dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="48dp"
+                android:text="MINUTOS"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_text_seg" />
+
+            <Button
+                android:id="@+id/id_eliminar_seg"
+                android:layout_width="146dp"
+                android:layout_height="57dp"
+                android:text="BORRAR"
+                app:icon="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.509"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_convmin_seg"
+                app:layout_constraintVertical_bias="0.151" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </FrameLayout>

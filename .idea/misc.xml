@@ -4,14 +4,29 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/app_bar_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/calcular_cateto_a_fragment.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/calcular_cateto_b_fragment.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/calcular_hipotenusa_fragment.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/cilindro_fragment.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/circle_fragment.xml" value="0.25" />
         <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/content_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/convertir_combinados_fragment.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/convertir_grados_fragment.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/convertir_minutos_fragment.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/convertir_segundos_fragment.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/cubo_fragment.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/division_angulos_fragment.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/esfera_fragment.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/fragment_home.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/g_m_s_to_radianes_fragment.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/grados_to_g_m_fragment.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/grados_to_radianes_fragment.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/multiplicacion_angulos_fragment.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/nav_header_main.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/rectangle_fragment.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/resta_angulos_fragment.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/square_fragment.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/suma_angulos_fragment.xml" value="0.25" />
         <entry key="..\:/Users/Lenovo L460/Documents/OCTAVO_CUATRIMESTRE/Gestion de desarrollo software/final/Equipo1-AppMovil/app/src/main/res/layout/triangle_fragment.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/coron/AndroidStudioProjects/iMath/app/src/main/res/drawable-v21/ic_menu_gallery.xml" value="0.2495" />
         <entry key="..\:/Users/coron/AndroidStudioProjects/iMath/app/src/main/res/drawable/ic_calculate.xml" value="0.2495" />

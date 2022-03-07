@@ -1,13 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.RestaAngulos.RestaAngulosFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:orientation="vertical">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/fondo_dise">
+
+            <ImageView
+                android:id="@+id/id_resta"
+                android:layout_width="107dp"
+                android:layout_height="114dp"
+                android:layout_marginTop="72dp"
+                android:src="@drawable/ic_restar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/id_instrucciones"
+                android:layout_width="308dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Ingresa todos los datos solicitados de forma correcta y completa"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_resta" />
+
+            <EditText
+                android:id="@+id/id_grados_res"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="68dp"
+                android:ems="10"
+                android:hint="Grados"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones" />
+
+            <EditText
+                android:id="@+id/id_minutos_res"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="68dp"
+                android:ems="10"
+                android:hint="Minuros"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toEndOf="@+id/id_grados_res"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones" />
+
+            <EditText
+                android:id="@+id/id_segundos_res"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="68dp"
+                android:ems="10"
+                android:hint="Segundos"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/id_minutos_res"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones" />
+
+            <Button
+                android:id="@+id/id_calcular_res"
+                android:layout_width="146dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="36dp"
+                android:text="Calcular"
+                app:icon="@drawable/ic_calculate"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_grados_res"
+                app:layout_constraintVertical_bias="0.327" />
+
+            <Button
+                android:id="@+id/id_borrar_res"
+                android:layout_width="146dp"
+                android:layout_height="57dp"
+                android:text="BORRAR"
+                app:icon="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.554"
+                app:layout_constraintStart_toEndOf="@+id/id_calcular_res"
+                app:layout_constraintTop_toBottomOf="@+id/id_segundos_res"
+                app:layout_constraintVertical_bias="0.327" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </FrameLayout>

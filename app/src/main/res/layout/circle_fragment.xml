@@ -55,7 +55,7 @@
                             android:id="@+id/instruccion"
                             android:layout_width="260dp"
                             android:layout_height="45dp"
-                            android:layout_marginTop="30dp"
+                            android:layout_marginTop="28dp"
                             android:fontFamily="sans-serif-black"
                             android:text="Ingresa todos los datos solicitados de forma correcta y completa"
                             android:textAlignment="center"
