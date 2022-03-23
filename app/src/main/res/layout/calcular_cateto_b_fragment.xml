@@ -17,86 +17,108 @@
             android:background="@drawable/fondo_dise">
 
             <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="150dp"
-                android:layout_height="179dp"
-                android:layout_marginTop="84dp"
+                android:id="@+id/imageView6"
+                android:layout_width="148dp"
+                android:layout_height="148dp"
+                android:layout_marginTop="64dp"
                 android:src="@drawable/ic_pythagoras"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintHorizontal_bias="0.543"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/id_instrucciones_catb"
-                android:layout_width="317dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="40dp"
+                android:id="@+id/id_instrucciones_cata"
+                android:layout_width="260dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="48dp"
                 android:fontFamily="sans-serif-black"
                 android:text="Ingresa todos los datos solicitados de forma correcta y completa"
                 android:textAlignment="center"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+                app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
             <EditText
-                android:id="@+id/id_hipotenusa_b"
+                android:id="@+id/id_hipo_a"
                 android:layout_width="110dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="60dp"
                 android:ems="10"
                 android:hint="Hipotenusa"
                 android:inputType="numberDecimal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_catb" />
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_cata" />
 
             <EditText
-                android:id="@+id/id_Cateto_a"
+                android:id="@+id/id_cateto_a"
                 android:layout_width="110dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
                 android:ems="10"
                 android:hint="Cateto a"
                 android:inputType="numberDecimal"
-                app:layout_constraintStart_toEndOf="@+id/id_hipotenusa_b"
-                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_catb" />
+                app:layout_constraintStart_toEndOf="@+id/id_hipo_a"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_cata" />
 
             <Spinner
-                android:id="@+id/id_unidad_b"
+                android:id="@+id/id_unidad"
                 android:layout_width="110dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="32dp"
-                app:layout_constraintStart_toEndOf="@+id/id_Cateto_a"
-                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_catb" />
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.189"
+                app:layout_constraintStart_toEndOf="@+id/id_cateto_b"
+                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_cata" />
 
             <Button
-                android:id="@+id/id_calcular_b"
-                android:layout_width="157dp"
+                android:id="@+id/id_calcular_catb"
+                android:layout_width="146dp"
                 android:layout_height="57dp"
-                android:layout_marginStart="44dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="40dp"
                 android:text="CALCULAR"
                 app:icon="@drawable/ic_calculate"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_Cateto_a"
-                app:layout_constraintVertical_bias="0.348" />
+                app:layout_constraintTop_toBottomOf="@+id/id_hipo_a"
+                app:layout_constraintVertical_bias="0.085" />
 
             <Button
-                android:id="@+id/id_eliminar_b"
+                android:id="@+id/id_eliminar_catb"
                 android:layout_width="146dp"
                 android:layout_height="57dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="35dp"
                 android:text="BORRAR"
                 app:icon="@drawable/ic_delete"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.265"
-                app:layout_constraintStart_toEndOf="@+id/id_calcular_b"
-                app:layout_constraintTop_toBottomOf="@+id/id_Cateto_a"
-                app:layout_constraintVertical_bias="0.348" />
+                app:layout_constraintTop_toBottomOf="@+id/id_cateto_a"
+                app:layout_constraintVertical_bias="0.085" />
+
+            <TextView
+                android:id="@+id/tvResultado"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="50dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/darkorange"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
+
 </FrameLayout>
