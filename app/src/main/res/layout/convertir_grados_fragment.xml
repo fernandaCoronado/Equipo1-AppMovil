@@ -18,20 +18,20 @@
 
             <ImageView
                 android:id="@+id/imageView10"
-                android:layout_width="163dp"
-                android:layout_height="133dp"
-                android:layout_marginTop="72dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="28dp"
                 android:src="@drawable/ic_convertir"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.536"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/id_conv_grados"
                 android:layout_width="271dp"
-                android:layout_height="72dp"
-                android:layout_marginTop="60dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
                 android:fontFamily="sans-serif-black"
                 android:text="Ingresa todos los datos solicitados de forma correcta y completa"
                 android:textAlignment="center"
@@ -41,13 +41,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
             <EditText
-                android:id="@+id/id_gradosaconvertir"
+                android:id="@+id/id_grados"
                 android:layout_width="202dp"
                 android:layout_height="55dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="30dp"
                 android:ems="10"
-                android:hint="Grados"
-                android:inputType="numberDecimal"
+                android:hint="* Grados"
+                android:inputType="number"
                 android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
@@ -62,17 +62,17 @@
                 android:fontFamily="sans-serif-black"
                 android:text="Convertir a :"
                 android:textAlignment="center"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_gradosaconvertir" />
+                app:layout_constraintTop_toBottomOf="@+id/id_grados" />
 
             <Button
                 android:id="@+id/id_conv_min"
                 android:layout_width="146dp"
                 android:layout_height="57dp"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
                 android:text="MINUTOS"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -81,26 +81,52 @@
                 android:id="@+id/id_conv_seg"
                 android:layout_width="146dp"
                 android:layout_height="57dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
                 android:text="SEGUNDOS"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.397"
-                app:layout_constraintStart_toEndOf="@+id/id_conv_min"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
             <Button
-                android:id="@+id/id_eliminnar_gra"
+                android:id="@+id/id_borrar"
                 android:layout_width="146dp"
                 android:layout_height="57dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="40sp"
                 android:text="BORRAR"
                 app:icon="@drawable/ic_delete"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.513"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_conv_seg"
-                app:layout_constraintVertical_bias="0.059" />
+                app:layout_constraintTop_toBottomOf="@+id/tvResultado" />
+
+            <TextView
+                android:id="@+id/tvTipo"
+                android:layout_width="92dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="30dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_conv_min" />
+
+            <TextView
+                android:id="@+id/tvResultado"
+                android:layout_width="92dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#ae326a"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTipo" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </FrameLayout>
