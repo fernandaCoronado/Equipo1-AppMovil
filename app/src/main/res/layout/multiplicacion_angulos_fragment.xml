@@ -229,4 +229,5 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvMinutos" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
+
 </FrameLayout>
