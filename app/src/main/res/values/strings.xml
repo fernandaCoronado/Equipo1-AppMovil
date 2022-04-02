@@ -27,6 +27,4 @@
     <string name="menu_multiplicar_angulos">Multiplicar ángulos</string>
     <string name="menu_dividir_angulos">Dividir ángulos</string>
 
-    <string name="msg_error">Faltan datos</string>
-
 </resources>
