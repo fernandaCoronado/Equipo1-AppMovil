@@ -25,8 +25,7 @@ public class SumaAngulosFragment extends Fragment {
 
     private SumaAngulosViewModel mViewModel;
 
-    private EditText txtGrados, txtGrados2, txtMinutos, txtMinutos2,
-            txtSegundos, txtSegundos2;
+    private EditText txtGrados, txtGrados2, txtMinutos, txtMinutos2, txtSegundos, txtSegundos2;
     private TextView tvGrados, tvMinutos, tvSegundos;
     private Button btnCalcular, btnBorrar;
 
@@ -74,9 +73,6 @@ public class SumaAngulosFragment extends Fragment {
         // Botones
         btnBorrar = v.findViewById(R.id.id_borrar);
         btnCalcular = v.findViewById(R.id.id_calcular);
-
-        // Formato números
-        final DecimalFormat[] decimalFormat = new DecimalFormat[1];
 
         // Botón CALCULAR
         btnCalcular.setOnClickListener(new View.OnClickListener() {
