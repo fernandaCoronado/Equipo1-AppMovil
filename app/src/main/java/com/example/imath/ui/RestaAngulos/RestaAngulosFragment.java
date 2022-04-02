@@ -31,14 +31,6 @@ public class RestaAngulosFragment extends Fragment {
     private int grados2, minutos2, segundos2;
     private int totalGrados, totalMinutos, totalSegundos;
 
-    /*
-    * TextView mostrarResultado;
-    EditText recibirGrados1, recibirGrados2, recibirMinutos1, recibirMinutos2, recibirSegundos1, recibirSegundos2;
-    Button botonResultado, botonBorrar;
-
-    int grados1, grados2, minutos1, minutos2, segundos1, segundos2;
-    int segundos, minutos, grados;*/
-
     public static RestaAngulosFragment newInstance() {
         return new RestaAngulosFragment();
     }
