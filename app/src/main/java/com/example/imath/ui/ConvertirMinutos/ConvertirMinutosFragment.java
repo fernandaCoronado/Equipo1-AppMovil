@@ -66,7 +66,7 @@ public class ConvertirMinutosFragment extends Fragment {
                     txtMinutos.setError("Faltan datos");
                 else {
                     DecimalFormat decimalFormat = new DecimalFormat("#0.0000");
-                    minutos = Integer.parseInt(txtMinutos.getText().toString());
+                    minutos = Integer.parseInt(txtMinutos.getText().toString().replace(",", ""));
                     grados = (double) minutos / 60;
                     // mostrarResultado.setText("CONVERSIÓN A MINUTOS: \n" + minutos + " \'");
                     tvTipo.setText("GRADOS");

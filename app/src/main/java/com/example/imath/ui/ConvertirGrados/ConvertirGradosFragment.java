@@ -62,7 +62,7 @@ public class ConvertirGradosFragment extends Fragment {
                 if (txtGrados.length() == 0)
                     txtGrados.setError("Faltan datos");
                 else {
-                    grados = Integer.parseInt(txtGrados.getText().toString());
+                    grados = Integer.parseInt(txtGrados.getText().toString().replace(",", ""));
                     minutos = grados * 60;
                     // mostrarResultado.setText("CONVERSIÓN A MINUTOS: \n" + minutos + " \'");
                     tvTipo.setText("MINUTOS");
