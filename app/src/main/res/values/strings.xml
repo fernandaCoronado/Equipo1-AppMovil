@@ -27,4 +27,16 @@
     <string name="menu_multiplicar_angulos">Multiplicar ángulos</string>
     <string name="menu_dividir_angulos">Dividir ángulos</string>
 
+    <string name="btn_area">Calcular área</string>
+    <string name="btn_perimetro">Calcular perímetro</string>
+    <string name="btn_volumen">Calcular volumen</string>
+    <string name="btn_grados">Calcular grados</string>
+    <string name="btn_minutos">Calcular minutos</string>
+    <string name="btn_segundos">Calcular segundos</string>
+    <string name="btn_calcular">Realizar operación</string>
+    <string name="btn_borrar">Borrar</string>
+    <string name="pst_area">Área</string>
+    <string name="pst_volumen">Volumen</string>
+    <string name="pst_perimetro">Perímetro</string>
+
 </resources>

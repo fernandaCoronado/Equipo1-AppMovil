@@ -73,6 +73,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="10dp"
                 android:text="GRADOS"
+                android:tooltipText="@string/btn_grados"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/id_text" />
 
@@ -82,6 +83,7 @@
                 android:layout_height="57dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="40dp"
+                android:tooltipText="@string/btn_minutos"
                 android:text="MINUTOS"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/id_text" />
@@ -122,6 +124,7 @@
                 android:layout_marginTop="40dp"
                 android:text="BORRAR"
                 app:icon="@drawable/ic_delete"
+                android:tooltipText="@string/btn_borrar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"

@@ -97,24 +97,26 @@
                             app:layout_constraintTop_toBottomOf="@+id/txtLado1" />
 
                         <Button
-                            android:id="@+id/btnPerimetro"
+                            android:id="@+id/btnBorrarPerimetro"
                             android:layout_width="155dp"
                             android:layout_height="60dp"
                             android:layout_marginStart="30dp"
                             android:layout_marginTop="40dp"
-                            android:drawableLeft="@drawable/ic_calculate"
-                            android:text="Calcular"
+                            android:drawableLeft="@drawable/ic_delete"
+                            android:text="borrar"
+                            android:tooltipText="@string/btn_borrar"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/txtLado3" />
 
                         <Button
-                            android:id="@+id/btnBorrarPerimetro"
+                            android:id="@+id/btnPerimetro"
                             android:layout_width="155dp"
                             android:layout_height="60dp"
                             android:layout_marginTop="40dp"
                             android:layout_marginEnd="30dp"
-                            android:drawableLeft="@drawable/ic_delete"
-                            android:text="Borrar"
+                            android:drawableLeft="@drawable/ic_calculate"
+                            android:text="calcular"
+                            android:tooltipText="@string/btn_perimetro"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/txtLado3" />
 
@@ -225,24 +227,26 @@
                             app:layout_constraintTop_toBottomOf="@+id/txtBase" />
 
                         <Button
-                            android:id="@+id/btnBorrarArea"
+                            android:id="@+id/btnArea"
                             android:layout_width="155dp"
                             android:layout_height="60dp"
                             android:layout_marginTop="18dp"
                             android:layout_marginEnd="30dp"
-                            android:drawableLeft="@drawable/ic_delete"
-                            android:text="Borrar"
+                            android:drawableLeft="@drawable/ic_calculate"
+                            android:tooltipText="@string/btn_area"
+                            android:text="Calcular"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/unidadArea" />
 
                         <Button
-                            android:id="@+id/btnArea"
+                            android:id="@+id/btnBorrarArea"
                             android:layout_width="155dp"
                             android:layout_height="60dp"
                             android:layout_marginStart="30dp"
                             android:layout_marginTop="18dp"
-                            android:drawableLeft="@drawable/ic_calculate"
-                            android:text="Calcular"
+                            android:drawableLeft="@drawable/ic_delete"
+                            android:text="Borrar"
+                            android:tooltipText="@string/btn_borrar"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/unidadArea" />
 
