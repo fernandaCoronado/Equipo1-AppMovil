@@ -17,122 +17,196 @@
             android:background="@drawable/fondo_dise">
 
             <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="129dp"
-                android:layout_height="130dp"
-                android:layout_marginTop="92dp"
+                android:id="@+id/imageView11"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="28dp"
                 android:src="@drawable/ic_convertir"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/id_instrucciones_comb"
-                android:layout_width="332dp"
-                android:layout_height="72dp"
-                android:layout_marginTop="56dp"
+                android:id="@+id/instruccion"
+                android:layout_width="271dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
                 android:fontFamily="sans-serif-black"
                 android:text="Ingresa todos los datos solicitados de forma correcta y completa"
                 android:textAlignment="center"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.493"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+                app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+            <TextView
+                android:id="@+id/insGrados"
+                android:layout_width="92dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="25dp"
+                android:text="GRADOS"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instruccion" />
+
+            <TextView
+                android:id="@+id/insMinutos"
+                android:layout_width="92dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:text="MINUTOS"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/insGrados"
+                app:layout_constraintTop_toBottomOf="@+id/instruccion" />
+
+            <TextView
+                android:id="@+id/insSegundos"
+                android:layout_width="92dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="40dp"
+                android:text="SEGUNDOS"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instruccion" />
 
             <EditText
-                android:id="@+id/id_grados_comb"
+                android:id="@+id/id_grados"
                 android:layout_width="92dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
                 android:ems="10"
                 android:hint="Grados"
-                android:inputType="numberDecimal"
+                android:inputType="number"
+                android:textAlignment="center"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_comb" />
+                app:layout_constraintTop_toBottomOf="@+id/insGrados" />
 
             <EditText
-                android:id="@+id/id_minutos_comb"
+                android:id="@+id/id_minutos"
                 android:layout_width="92dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
                 android:ems="10"
                 android:hint="Minutos"
-                android:inputType="numberDecimal"
-                app:layout_constraintStart_toEndOf="@+id/id_grados_comb"
-                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_comb" />
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/id_segundos"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/id_grados"
+                app:layout_constraintTop_toBottomOf="@+id/insMinutos" />
 
             <EditText
-                android:id="@+id/id_segundos_comb"
+                android:id="@+id/id_segundos"
                 android:layout_width="92dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
                 android:ems="10"
                 android:hint="Segundos"
-                android:inputType="numberDecimal"
+                android:inputType="number"
+                android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.428"
-                app:layout_constraintStart_toEndOf="@+id/id_minutos_comb"
-                app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_comb" />
+                app:layout_constraintTop_toBottomOf="@+id/insSegundos" />
 
             <Button
-                android:id="@+id/conv_grados"
+                android:id="@+id/btnGrados"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
                 android:text="Grados"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                app:layout_constraintTop_toBottomOf="@+id/id_text" />
 
             <Button
-                android:id="@+id/conv_segundos"
+                android:id="@+id/btnSegundos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
                 android:text="Segundos"
-                app:layout_constraintStart_toEndOf="@+id/conv_minutos"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_text" />
 
             <Button
-                android:id="@+id/conv_minutos"
+                android:id="@+id/btnMinutos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="44dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
                 android:text="MINUTOS"
-                app:layout_constraintStart_toEndOf="@+id/conv_grados"
-                app:layout_constraintTop_toTopOf="@+id/textView4" />
+                app:layout_constraintStart_toEndOf="@+id/btnGrados"
+                app:layout_constraintTop_toBottomOf="@+id/id_text" />
 
-            <Button
-                android:id="@+id/id_eliminar_comb"
-                android:layout_width="146dp"
-                android:layout_height="57dp"
-                android:text="BORRAR"
-                app:icon="@drawable/ic_delete"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <TextView
+                android:id="@+id/tvTipo"
+                android:layout_width="92dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/conv_minutos"
-                app:layout_constraintVertical_bias="0.315" />
+                app:layout_constraintTop_toBottomOf="@+id/btnMinutos" />
 
             <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:fontFamily="sans-serif-black"
-                android:text="Convertir a:"
+                android:id="@+id/tvResultado"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:text=""
                 android:textAlignment="center"
-                android:textSize="12sp"
+                android:textColor="#ae326a"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.46"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_minutos_comb" />
+                app:layout_constraintTop_toBottomOf="@+id/tvTipo" />
+
+            <Button
+                android:id="@+id/id_borrar"
+                android:layout_width="146dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="18dp"
+                android:text="BORRAR"
+                app:icon="@drawable/ic_delete"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvResultado" />
+
+            <TextView
+                android:id="@+id/id_text"
+                android:layout_width="153dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Convertir a :"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.468"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_minutos" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </FrameLayout>
