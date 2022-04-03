@@ -20,7 +20,7 @@
                 android:id="@+id/imageView6"
                 android:layout_width="148dp"
                 android:layout_height="148dp"
-                android:layout_marginTop="64dp"
+                android:layout_marginTop="25dp"
                 android:src="@drawable/ic_pythagoras"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.543"
@@ -46,7 +46,7 @@
                 android:layout_width="110dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="30dp"
                 android:ems="10"
                 android:hint="Cateto a"
                 android:inputType="numberDecimal"
@@ -58,7 +58,7 @@
                 android:layout_width="110dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="10dp"
                 android:ems="10"
                 android:hint="Cateto b"
@@ -70,7 +70,7 @@
                 android:id="@+id/id_unidad"
                 android:layout_width="110dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="30dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.189"
@@ -85,10 +85,8 @@
                 android:layout_marginTop="40dp"
                 android:text="CALCULAR"
                 app:icon="@drawable/ic_calculate"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_cateto_a"
-                app:layout_constraintVertical_bias="0.085" />
+                app:layout_constraintTop_toBottomOf="@+id/id_cateto_a" />
 
             <Button
                 android:id="@+id/id_eliminar"
@@ -98,25 +96,36 @@
                 android:layout_marginEnd="35dp"
                 android:text="BORRAR"
                 app:icon="@drawable/ic_delete"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_cateto_b"
-                app:layout_constraintVertical_bias="0.085" />
+                app:layout_constraintTop_toBottomOf="@+id/id_cateto_b" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Resultado"
+                android:textAlignment="center"
+                android:textColor="#ae326a"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_calcular" />
 
             <TextView
                 android:id="@+id/tvResultado"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:layout_marginBottom="50dp"
+                android:layout_marginTop="20dp"
                 android:text=""
                 android:textAlignment="center"
-                android:textColor="@color/darkorange"
-                android:textSize="18dp"
+                android:textColor="#ae326a"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
