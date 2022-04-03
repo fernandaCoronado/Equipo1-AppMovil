@@ -23,14 +23,14 @@
                 android:layout_marginTop="64dp"
                 android:src="@drawable/ic_convertir"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/instrucciones_g_to_gms"
-                android:layout_width="310dp"
-                android:layout_height="64dp"
+                android:id="@+id/instrucciones"
+                android:layout_width="258dp"
+                android:layout_height="40dp"
                 android:layout_marginTop="28dp"
                 android:fontFamily="sans-serif-black"
                 android:text="Ingresa todos los datos solicitados de forma correcta y completa"
@@ -41,45 +41,83 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView14" />
 
+            <TextView
+                android:id="@+id/anuncio"
+                android:layout_width="310dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-black"
+                android:text="PUEDES UTILIZAR NÚMEROS DECIMALES"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instrucciones" />
+
             <EditText
-                android:id="@+id/id_grados_g_to_gms"
-                android:layout_width="202dp"
-                android:layout_height="55dp"
-                android:layout_marginTop="40dp"
+                android:id="@+id/id_grados"
+                android:layout_width="280dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="8dp"
                 android:ems="10"
-                android:hint="Grados"
+                android:hint="Grados a convertir"
                 android:inputType="numberDecimal"
                 android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/instrucciones_g_to_gms" />
+                app:layout_constraintTop_toBottomOf="@+id/anuncio" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Resultado"
+                android:textAlignment="center"
+                android:textColor="#ae326a"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_grados" />
 
             <Button
-                android:id="@+id/id_conv_g_to_gms"
+                android:id="@+id/id_borrar"
                 android:layout_width="155dp"
                 android:layout_height="57dp"
-                android:layout_marginStart="48dp"
-                android:text="CONVERTIR"
-                app:icon="@drawable/ic_convertir"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_grados_g_to_gms"
-                app:layout_constraintVertical_bias="0.201" />
-
-            <Button
-                android:id="@+id/id_eliminar_g_to_gms"
-                android:layout_width="155dp"
-                android:layout_height="57dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="30dp"
                 android:text="BORRAR"
                 app:icon="@drawable/ic_delete"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvResultado" />
+
+            <Button
+                android:id="@+id/id_convertir"
+                android:layout_width="155dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="35dp"
+                android:text="CONVERTIR"
+                app:icon="@drawable/ic_convertir"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.394"
-                app:layout_constraintStart_toEndOf="@+id/id_conv_g_to_gms"
-                app:layout_constraintTop_toBottomOf="@+id/id_grados_g_to_gms"
-                app:layout_constraintVertical_bias="0.184" />
+                app:layout_constraintTop_toBottomOf="@+id/tvResultado" />
+
+            <TextView
+                android:id="@+id/tvResultado"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#ae326a"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </FrameLayout>
