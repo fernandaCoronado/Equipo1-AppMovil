@@ -59,7 +59,8 @@ public class ConvertirSegundosFragment extends Fragment {
         btnGrados = v.findViewById(R.id.id_conv_grados);
         btnMinutos = v.findViewById(R.id.id_conv_min);
 
-        DecimalFormat decimalFormat = new DecimalFormat("#0.0000");
+        // Formato números
+        final DecimalFormat[] decimalFormat = new DecimalFormat[1];
 
         btnGrados.setOnClickListener(new View.OnClickListener() { // hago clic en el botón
             @Override
@@ -70,8 +71,13 @@ public class ConvertirSegundosFragment extends Fragment {
                     segundos = Integer.parseInt(txtSegundos.getText().toString().replace(",", ""));
                     grados = (double) segundos / 3600;
                     // mostrarResultado.setText("CONVERSIÓN A MINUTOS: \n" + minutos + " \'");
+                    if (grados >= 1000) {
+                        decimalFormat[0] = new DecimalFormat("#0,000.0000");
+                    } else {
+                        decimalFormat[0] = new DecimalFormat("#0.0000");
+                    }
                     tvTipo.setText("GRADOS");
-                    tvResultado.setText(decimalFormat.format(grados) + "°");
+                    tvResultado.setText(decimalFormat[0].format(grados) + "°");
                 }
             }
         });
@@ -85,8 +91,13 @@ public class ConvertirSegundosFragment extends Fragment {
                     segundos = Integer.parseInt(txtSegundos.getText().toString().replace(",", ""));
                     minutos = (double) segundos / 60;
                     // mostrarResultado.setText("CONVERSIÓN A SEGUNDOS: \n" + segundos + " \"");
+                    if (minutos >= 1000) {
+                        decimalFormat[0] = new DecimalFormat("#0,000.0000");
+                    } else {
+                        decimalFormat[0] = new DecimalFormat("#0.0000");
+                    }
                     tvTipo.setText("MINUTOS");
-                    tvResultado.setText(decimalFormat.format(minutos) + "\'");
+                    tvResultado.setText(decimalFormat[0].format(minutos) + "\'");
                 }
             }
         });

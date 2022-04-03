@@ -55,6 +55,9 @@ public class GMSToRadianesFragment extends Fragment {
         botonConvertir = v.findViewById(R.id.id_convertir);
         botonBorrar = v.findViewById(R.id.id_borrar);
 
+        // Formato números
+        final DecimalFormat[] decimalFormat = new DecimalFormat[1];
+
         //BORRAR
         botonBorrar.setOnClickListener(new View.OnClickListener() { // hago clic en el botón
             @Override
@@ -77,8 +80,6 @@ public class GMSToRadianesFragment extends Fragment {
                 if (recibirMinutos.length() == 0) { minutos = 0; } else { minutos = Integer.parseInt(recibirMinutos.getText().toString().replace(",", "")); }
                 if (recibirSegundos.length() == 0) { segundos = 0; } else { segundos = Integer.parseInt(recibirSegundos.getText().toString().replace(",", "")); }
 
-                DecimalFormat decimal = new DecimalFormat("#0.00000");
-
                 calcularMinutos = (double) minutos / 60;
                 calcularSegundos = (double) segundos / 3600;
 
@@ -86,7 +87,12 @@ public class GMSToRadianesFragment extends Fragment {
 
                 radianes = (resultadoGrados * Math.PI) / 180;
 
-                mostrarResultado.setText(decimal.format(radianes) + " rad");
+                if (radianes >= 1000) {
+                    decimalFormat[0] = new DecimalFormat("#0,000.0000");
+                } else {
+                    decimalFormat[0] = new DecimalFormat("#0.0000");
+                }
+                mostrarResultado.setText(decimalFormat[0].format(radianes) + " rad");
 
             }
         });

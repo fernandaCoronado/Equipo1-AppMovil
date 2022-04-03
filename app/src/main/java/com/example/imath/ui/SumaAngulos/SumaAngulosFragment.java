@@ -74,6 +74,9 @@ public class SumaAngulosFragment extends Fragment {
         btnBorrar = v.findViewById(R.id.id_borrar);
         btnCalcular = v.findViewById(R.id.id_calcular);
 
+        // Formato números
+        final DecimalFormat[] decimalFormat = new DecimalFormat[1];
+
         // Botón CALCULAR
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,9 +117,26 @@ public class SumaAngulosFragment extends Fragment {
                     }
                 }
 
-                tvGrados.setText(totalGrados + " °");
-                tvMinutos.setText(totalMinutos + " \'");
-                tvSegundos.setText(totalSegundos + " \"");
+                if (totalGrados >= 1000) {
+                    decimalFormat[0] = new DecimalFormat("#0,000");
+                } else {
+                    decimalFormat[0] = new DecimalFormat("#0");
+                }
+                tvGrados.setText(decimalFormat[0].format(totalGrados) + " °");
+
+                if (totalMinutos >= 1000) {
+                    decimalFormat[0] = new DecimalFormat("#0,000");
+                } else {
+                    decimalFormat[0] = new DecimalFormat("#0");
+                }
+                tvMinutos.setText(decimalFormat[0].format(totalMinutos) + " \'");
+
+                if (totalSegundos >= 1000) {
+                    decimalFormat[0] = new DecimalFormat("#0,000");
+                } else {
+                    decimalFormat[0] = new DecimalFormat("#0");
+                }
+                tvSegundos.setText(decimalFormat[0].format(totalSegundos) + " \"");
             }
         });
 

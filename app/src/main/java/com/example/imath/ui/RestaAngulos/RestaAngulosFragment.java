@@ -18,6 +18,8 @@ import android.widget.TextView;
 import com.example.imath.NumberTextWatcher;
 import com.example.imath.R;
 
+import java.text.DecimalFormat;
+
 public class RestaAngulosFragment extends Fragment {
 
     private RestaAngulosViewModel mViewModel;
@@ -70,6 +72,9 @@ public class RestaAngulosFragment extends Fragment {
         btnBorrar = v.findViewById(R.id.id_borrar);
         btnCalcular = v.findViewById(R.id.id_calcular);
 
+        // Formato números
+        final DecimalFormat[] decimalFormat = new DecimalFormat[1];
+
         // Botón CALCULAR
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,16 +111,20 @@ public class RestaAngulosFragment extends Fragment {
                 }
 
                 if (segundos2 > segundos1) {
-                    minutos1 = minutos1 - 1;
-                    segundos1 = segundos1 + 60;
+                    while (segundos2 > segundos1) {
+                        minutos1 -= 1;
+                        segundos1 += 60;
+                    }
                     totalSegundos = segundos1 - segundos2;
                 } else {
                     totalSegundos = segundos1 - segundos2;
                 }
 
                 if (minutos2 > minutos1) {
-                    grados1 = grados1 - 1;
-                    minutos1 = minutos1 + 60;
+                    while (minutos2 > minutos1) {
+                        grados1 -= 1;
+                        minutos1 += 60;
+                    }
                     totalMinutos = minutos1 - minutos2;
                 } else {
                     totalMinutos = minutos1 - minutos2;
@@ -126,9 +135,26 @@ public class RestaAngulosFragment extends Fragment {
                 } else {
                     totalGrados = grados1 - grados2;
                     // mostrarResultado.setText("RESULTADO\n" + grados + " °  " + minutos + " \'  " + segundos + " \"");
-                    tvGrados.setText(totalGrados + " °");
-                    tvMinutos.setText(totalMinutos + " \'");
-                    tvSegundos.setText(totalSegundos + " \"");
+                    if (totalGrados >= 1000) {
+                        decimalFormat[0] = new DecimalFormat("#0,000");
+                    } else {
+                        decimalFormat[0] = new DecimalFormat("#0");
+                    }
+                    tvGrados.setText(decimalFormat[0].format(totalGrados) + " °");
+
+                    if (totalMinutos >= 1000) {
+                        decimalFormat[0] = new DecimalFormat("#0,000");
+                    } else {
+                        decimalFormat[0] = new DecimalFormat("#0");
+                    }
+                    tvMinutos.setText(decimalFormat[0].format(totalMinutos) + " \'");
+
+                    if (totalSegundos >= 1000) {
+                        decimalFormat[0] = new DecimalFormat("#0,000");
+                    } else {
+                        decimalFormat[0] = new DecimalFormat("#0");
+                    }
+                    tvSegundos.setText(decimalFormat[0].format(totalSegundos) + " \"");
                 }
             }
         });

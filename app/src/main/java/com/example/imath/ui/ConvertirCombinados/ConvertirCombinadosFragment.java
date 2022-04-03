@@ -57,6 +57,9 @@ public class ConvertirCombinadosFragment extends Fragment {
         btnSegundos = v.findViewById(R.id.btnSegundos);
         btnBorrar = v.findViewById(R.id.id_borrar);
 
+        // Formato números
+        final DecimalFormat[] decimalFormat = new DecimalFormat[1];
+
         // BORRAR
         btnBorrar.setOnClickListener(new View.OnClickListener() { // hago clic en el botón
             @Override
@@ -81,16 +84,19 @@ public class ConvertirCombinadosFragment extends Fragment {
                 if (txtMinutos.length() == 0) { minutos = 0; } else { minutos = Integer.parseInt(txtMinutos.getText().toString().replace(",", "")); }
                 if (txtSegundos.length() == 0) { segundos = 0; } else { segundos = Integer.parseInt(txtSegundos.getText().toString().replace(",", "")); }
 
-                DecimalFormat decimal = new DecimalFormat("#0.00000");
-
                 calcularMinutos = (double) minutos / 60;
                 calcularSegundos = (double) segundos / 3600;
 
                 resultadoGrados = grados + calcularMinutos + calcularSegundos;
 
                 // tvResultado.setText("RESULTADO: \n" + decimal.format(resultadoGrados) + " °");
+                if (resultadoGrados >= 1000) {
+                    decimalFormat[0] = new DecimalFormat("#0,000.0000");
+                } else {
+                    decimalFormat[0] = new DecimalFormat("#0.0000");
+                }
                 tvTipo.setText("GRADOS");
-                tvResultado.setText(decimal.format(resultadoGrados) + " °");
+                tvResultado.setText(decimalFormat[0].format(resultadoGrados) + " °");
             }
         });
 
@@ -100,7 +106,6 @@ public class ConvertirCombinadosFragment extends Fragment {
             public void onClick(View view) {
 
                 double calcularGrados, calcularSegundos, resultadoMinutos;
-                DecimalFormat decimal = new DecimalFormat("#0.00000");
 
                 if (txtGrados.length() == 0) { grados = 0; } else { grados = Integer.parseInt(txtGrados.getText().toString().replace(",", "")); }
                 if (txtMinutos.length() == 0) { minutos = 0; } else { minutos = Integer.parseInt(txtMinutos.getText().toString().replace(",", "")); }
@@ -112,8 +117,13 @@ public class ConvertirCombinadosFragment extends Fragment {
                 resultadoMinutos = minutos + calcularGrados + calcularSegundos;
 
                 // tvResultado.setText("RESULTADO: \n" + decimal.format(resultadoMinutos) + " \'");
+                if (resultadoMinutos >= 1000) {
+                    decimalFormat[0] = new DecimalFormat("#0,000.0000");
+                } else {
+                    decimalFormat[0] = new DecimalFormat("#0.0000");
+                }
                 tvTipo.setText("MINUTOS");
-                tvResultado.setText(decimal.format(resultadoMinutos) + " \"");
+                tvResultado.setText(decimalFormat[0].format(resultadoMinutos) + " \"");
             }
         });
 
@@ -134,8 +144,13 @@ public class ConvertirCombinadosFragment extends Fragment {
                 resultadoSegundos = segundos + calcularGrados + calcularMinutos;
 
                 // tvResultado.setText("RESULTADO: \n" + resultadoSegundos + " \"");
+                if (resultadoSegundos >= 1000) {
+                    decimalFormat[0] = new DecimalFormat("#0,000");
+                } else {
+                    decimalFormat[0] = new DecimalFormat("#0");
+                }
                 tvTipo.setText("SEGUNDOS");
-                tvResultado.setText(resultadoSegundos + " \'");
+                tvResultado.setText(decimalFormat[0].format(resultadoSegundos) + " \'");
             }
         });
         

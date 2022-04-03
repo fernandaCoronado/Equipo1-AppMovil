@@ -59,18 +59,25 @@ public class ConvertirMinutosFragment extends Fragment {
         btnGrados = v.findViewById(R.id.id_conv_grados);
         btnSegundos = v.findViewById(R.id.id_conv_seg);
 
+        // Formato números
+        final DecimalFormat[] decimalFormat = new DecimalFormat[1];
+
         btnGrados.setOnClickListener(new View.OnClickListener() { // hago clic en el botón
             @Override
             public void onClick(View view) {
                 if (txtMinutos.length() == 0)
                     txtMinutos.setError("Faltan datos");
                 else {
-                    DecimalFormat decimalFormat = new DecimalFormat("#0.0000");
                     minutos = Integer.parseInt(txtMinutos.getText().toString().replace(",", ""));
                     grados = (double) minutos / 60;
                     // mostrarResultado.setText("CONVERSIÓN A MINUTOS: \n" + minutos + " \'");
+                    if (grados >= 1000) {
+                        decimalFormat[0] = new DecimalFormat("#0,000.0000");
+                    } else {
+                        decimalFormat[0] = new DecimalFormat("#0.0000");
+                    }
                     tvTipo.setText("GRADOS");
-                    tvResultado.setText(decimalFormat.format(grados) + "°");
+                    tvResultado.setText(decimalFormat[0].format(grados) + "°");
                 }
             }
         });
@@ -84,8 +91,13 @@ public class ConvertirMinutosFragment extends Fragment {
                     minutos = Integer.parseInt(txtMinutos.getText().toString().replace(",", ""));
                     segundos = minutos * 60;
                     // mostrarResultado.setText("CONVERSIÓN A SEGUNDOS: \n" + segundos + " \"");
+                    if (segundos >= 1000) {
+                        decimalFormat[0] = new DecimalFormat("#0,000");
+                    } else {
+                        decimalFormat[0] = new DecimalFormat("#0");
+                    }
                     tvTipo.setText("SEGUNDOS");
-                    tvResultado.setText(segundos + "\"");
+                    tvResultado.setText(decimalFormat[0].format(segundos) + "\"");
                 }
             }
         });

@@ -45,16 +45,23 @@ public class GradosToRadianesFragment extends Fragment {
         botonBorrar = v.findViewById(R.id.id_borrar);
         botonConvertir = v.findViewById(R.id.id_convertir);
 
+        // Formato números
+        final DecimalFormat[] decimalFormat = new DecimalFormat[1];
+
         botonConvertir.setOnClickListener(new View.OnClickListener() { // hago clic en el botón
             @Override
             public void onClick(View view) {
-                DecimalFormat decimal = new DecimalFormat("#0.0000");
                 if (recibirDatos.length() == 0)
                     recibirDatos.setError("Faltan datos");
                 else {
                     grados = Double.parseDouble(recibirDatos.getText().toString().replace(",", ""));
                     radianes = (grados * Math.PI) / 180;
-                    mostrarResultado.setText(decimal.format(radianes) + " rad");
+                    if (radianes >= 1000) {
+                        decimalFormat[0] = new DecimalFormat("#0,000.0000");
+                    } else {
+                        decimalFormat[0] = new DecimalFormat("#0.0000");
+                    }
+                    mostrarResultado.setText(decimalFormat[0].format(radianes) + " rad");
                 }
             }
         });

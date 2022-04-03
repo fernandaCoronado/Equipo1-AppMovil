@@ -18,6 +18,8 @@ import android.widget.TextView;
 import com.example.imath.NumberTextWatcher;
 import com.example.imath.R;
 
+import java.text.DecimalFormat;
+
 public class GradosToGMSFragment extends Fragment {
 
     private GradosToGMViewModel mViewModel;
@@ -57,14 +59,15 @@ public class GradosToGMSFragment extends Fragment {
         btnBorrar = v.findViewById(R.id.id_borrar);
         btnCalcular = v.findViewById(R.id.id_convertir);
 
+        // Formato números
+        final DecimalFormat[] decimalFormat = new DecimalFormat[1];
+
         btnCalcular.setOnClickListener(new View.OnClickListener() { // hago clic en el botón
             @Override
             public void onClick(View view) {
-
                 if (txtGrados.length() == 0) { gradosRecibidos = 0; } else { gradosRecibidos = Double.parseDouble(txtGrados.getText().toString().replace(",", "")); }
 
                 strGrados = String.valueOf(gradosRecibidos);
-
                 grados = Integer.parseInt(strGrados.substring(0, strGrados.indexOf('.')));
                 residuo = Double.parseDouble(strGrados.substring(strGrados.indexOf('.')));
 
@@ -77,7 +80,12 @@ public class GradosToGMSFragment extends Fragment {
                 strSegundos = String.valueOf(calcularSegundos);
                 totalSegundos = Integer.parseInt(strSegundos.substring(0, strSegundos.indexOf('.')));
 
-                tvResultado.setText(grados + " °  " + totalMinutos + " \'  " + totalSegundos + " \"");
+                if (grados >= 1000) {
+                    decimalFormat[0] = new DecimalFormat("#0,000");
+                } else {
+                    decimalFormat[0] = new DecimalFormat("#0");
+                }
+                tvResultado.setText(decimalFormat[0].format(grados) + " °  " + totalMinutos + " \'  " + totalSegundos + " \"");
 
             }
         });

@@ -18,6 +18,8 @@ import android.widget.TextView;
 import com.example.imath.NumberTextWatcher;
 import com.example.imath.R;
 
+import java.text.DecimalFormat;
+
 public class MultiplicacionAngulosFragment extends Fragment {
 
     private MultiplicacionAngulosViewModel mViewModel;
@@ -65,6 +67,9 @@ public class MultiplicacionAngulosFragment extends Fragment {
         btnBorrar = v.findViewById(R.id.id_borrar);
         btnCalcular = v.findViewById(R.id.id_calcular);
 
+        // Formato números
+        final DecimalFormat[] decimalFormat = new DecimalFormat[1];
+
         btnCalcular.setOnClickListener(new View.OnClickListener() { // hago clic en el botón
             @Override
             public void onClick(View view) {
@@ -106,9 +111,26 @@ public class MultiplicacionAngulosFragment extends Fragment {
                 }
 
                 //mostrarResultado.setText("RESULTADO\n" + grados + " °  " + minutos + " \'  " + segundos + " \"");
-                tvGrados.setText(grados + " °");
-                tvMinutos.setText(minutos + " \'");
-                tvSegundos.setText(segundos + " \"");
+                if (grados >= 1000) {
+                    decimalFormat[0] = new DecimalFormat("#0,000");
+                } else {
+                    decimalFormat[0] = new DecimalFormat("#0");
+                }
+                tvGrados.setText(decimalFormat[0].format(grados) + " °");
+
+                if (minutos >= 1000) {
+                    decimalFormat[0] = new DecimalFormat("#0,000");
+                } else {
+                    decimalFormat[0] = new DecimalFormat("#0");
+                }
+                tvMinutos.setText(decimalFormat[0].format(minutos) + " \'");
+
+                if (segundos >= 1000) {
+                    decimalFormat[0] = new DecimalFormat("#0,000");
+                } else {
+                    decimalFormat[0] = new DecimalFormat("#0");
+                }
+                tvSegundos.setText(decimalFormat[0].format(segundos) + " \"");
 
             }
 
