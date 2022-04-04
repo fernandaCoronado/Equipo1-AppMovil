@@ -11,4 +11,5 @@
     <color name="red">#ff0000</color>
     <color name="lightslategray">#9568a9</color>
     <color name="darkorange">#EC9511</color>
+    <color name="gray">#4e5355</color>
 </resources>

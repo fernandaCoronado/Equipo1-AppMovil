@@ -1,10 +1,11 @@
 package com.example.imath;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.view.MenuItem;
 import android.view.Menu;
 
-import com.google.android.material.snackbar.Snackbar;
+import com.example.imath.ui.help.Help;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.nav_suma_angulos, R.id.nav_resta_angulos, R.id.nav_multiplicacion_angulos,
                 R.id.nav_dividir_angulos, R.id.nav_convertir_grados, R.id.nav_convertir_minutos,
                 R.id.nav_convertir_segundos, R.id.nav_convertir_combinados, R.id.nav_grados_to_gms,
-                R.id.nav_grados_to_radianes, R.id.nav_gms_to_radianes)
+                R.id.nav_grados_to_radianes, R.id.nav_gms_to_radianes, R.id.nav_help)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -60,6 +61,29 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_help:
+                // User chose the "Settings" item, show the app settings UI...
+                // Toast toast1 = Toast.makeText(getApplicationContext(), "Toast por defecto", Toast.LENGTH_SHORT);
+                // toast1.show();
+                Intent intent = new Intent(this, Help.class);
+                startActivity(intent);
+                return false;
+
+            /**
+             * Intent intent = new Intent(getActivity(), mFragmentFavorite.class);
+             * startActivity(intent);
+             */
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 
     @Override

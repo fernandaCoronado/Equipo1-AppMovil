@@ -6,6 +6,7 @@
     <string name="nav_header_subtitle">Funciones matemáticas</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="action_help">Ayuda</string>
 
     <string name="menu_home">Inicio</string>
     <string name="menu_gallery">Gallery</string>
@@ -27,6 +28,8 @@
     <string name="menu_multiplicar_angulos">Multiplicar ángulos</string>
     <string name="menu_dividir_angulos">Dividir ángulos</string>
 
+    <string name="menu_help">Ayuda</string>
+
     <string name="btn_area">Calcular área</string>
     <string name="btn_perimetro">Calcular perímetro</string>
     <string name="btn_volumen">Calcular volumen</string>
@@ -38,5 +41,7 @@
     <string name="pst_area">Área</string>
     <string name="pst_volumen">Volumen</string>
     <string name="pst_perimetro">Perímetro</string>
+
+    <string name="help">Ayuda</string>
 
 </resources>

@@ -137,4 +137,10 @@
         android:label="@string/menu_gms_to_radianes"
         tools:layout="@layout/g_m_s_to_radianes_fragment" />
 
+    <activity
+        android:id="@+id/nav_help"
+        android:name="com.example.imath.ui.help.Help"
+        android:label="@string/menu_help"
+        tools:layout="@layout/activity_help" />
+
 </navigation>
