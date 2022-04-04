@@ -104,7 +104,7 @@ public class EsferaFragment extends Fragment {
             public void onClick(View view) {
                 unidadVolumen = spUnidadVolumen.getSelectedItem().toString();
                 if (txtRadioVolumen.length() == 0) {
-                    txtRadioVolumen.setError("Faltan datos");
+                    txtRadioVolumen.setError("Falta el valor del radio");
                     txtRadioVolumen.requestFocus();
                 } else {
                     radioVolumen = Double.parseDouble(txtRadioVolumen.getText().toString().replace(",", ""));
@@ -139,7 +139,7 @@ public class EsferaFragment extends Fragment {
             public void onClick(View view) {
                 unidadArea = spUnidadArea.getSelectedItem().toString();
                 if (txtRadioArea.length() == 0) {
-                    txtRadioArea.setError("Faltan datos");
+                    txtRadioArea.setError("Falta el valor del radio");
                     txtRadioArea.requestFocus();
                 } else {
                     radioArea = Double.parseDouble(txtRadioArea.getText().toString().replace(",", ""));

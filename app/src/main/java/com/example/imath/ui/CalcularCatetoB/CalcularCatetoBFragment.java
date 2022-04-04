@@ -81,10 +81,10 @@ public class CalcularCatetoBFragment extends Fragment {
                     // txtRadioPerimetro.setError("Faltan datos");
                     // txtRadioPerimetro.requestFocus();
                     if (txtCatetoA.length() == 0) {
-                        txtCatetoA.setError("Faltan datos");
+                        txtCatetoA.setError("Falta el cateto a");
                     }
                     if (txtHipotenusa.length() == 0) {
-                        txtHipotenusa.setError("Faltan datos");
+                        txtHipotenusa.setError("Falta la hipotenusa");
                     }
                 } else {
                     catetoA = Double.parseDouble(txtCatetoA.getText().toString().replace(",", ""));

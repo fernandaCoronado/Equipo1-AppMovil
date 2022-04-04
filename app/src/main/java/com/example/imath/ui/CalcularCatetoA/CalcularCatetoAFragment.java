@@ -76,13 +76,11 @@ public class CalcularCatetoAFragment extends Fragment {
             public void onClick(View view) {
                 unidad = spUnidad.getSelectedItem().toString();
                 if (txtCatetoB.length() == 0 || txtHipotenusa.length() == 0) {
-                    // txtRadioPerimetro.setError("Faltan datos");
-                    // txtRadioPerimetro.requestFocus();
                     if (txtCatetoB.length() == 0) {
-                        txtCatetoB.setError("Faltan datos");
+                        txtCatetoB.setError("Falta el cateto b");
                     }
                     if (txtHipotenusa.length() == 0) {
-                        txtHipotenusa.setError("Faltan datos");
+                        txtHipotenusa.setError("Falta la hipotenusa");
                     }
                 } else {
                     catetoB = Double.parseDouble(txtCatetoB.getText().toString().replace(",", ""));

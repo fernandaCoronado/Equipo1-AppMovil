@@ -117,15 +117,15 @@ public class TriangleFragment extends Fragment {
                 unidadPerimetro = spUnidadPerimetro.getSelectedItem().toString();
                 if (txtLado1.length() == 0 || txtLado2.length() == 0 || txtLado3.length() == 0 || unidadPerimetro.length() == 0) {
                     if (txtLado1.length() == 0) {
-                        txtLado1.setError("Faltan datos");
+                        txtLado1.setError("Falta el lado 1");
                         txtLado1.requestFocus();
                     }
                     if (txtLado2.length() == 0) {
-                        txtLado2.setError("Faltan datos");
+                        txtLado2.setError("Falta el lado 2");
                         txtLado2.requestFocus();
                     }
                     if (txtLado3.length() == 0) {
-                        txtLado3.setError("Faltan datos");
+                        txtLado3.setError("Falta el lado 3");
                         txtLado3.requestFocus();
                     }
                 } else {
@@ -168,11 +168,11 @@ public class TriangleFragment extends Fragment {
                 if (txtBase.length() == 0 || txtAltura.length() == 0) {
                     // Mensajes de error
                     if (txtBase.length() == 0) {
-                        txtBase.setError("Faltan datos");
+                        txtBase.setError("Falta la base");
                         txtBase.requestFocus();
                     }
                     if (txtAltura.length() == 0) {
-                        txtAltura.setError("Faltan datos");
+                        txtAltura.setError("Falta la altura");
                         txtAltura.requestFocus();
                     }
                 } else {

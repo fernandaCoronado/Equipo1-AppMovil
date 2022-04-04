@@ -104,7 +104,7 @@ public class SquareFragment extends Fragment {
             public void onClick(View view) {
                 unidadPerimetro = spUnidadPerimetro.getSelectedItem().toString();
                 if (txtLadoPerimetro.length() == 0) {
-                    txtLadoPerimetro.setError("Faltan datos");
+                    txtLadoPerimetro.setError("Falta el valor de el lado");
                     txtLadoPerimetro.requestFocus();
                 } else {
                     ladoPerimetro = Double.parseDouble(txtLadoPerimetro.getText().toString().replace(",", ""));
@@ -139,7 +139,7 @@ public class SquareFragment extends Fragment {
             public void onClick(View view) {
                 unidadArea = spUnidadArea.getSelectedItem().toString();
                 if (txtLadoArea.length() == 0) {
-                    txtLadoPerimetro.setError("Faltan datos");
+                    txtLadoPerimetro.setError("Falta el valor de el lado");
                     txtLadoPerimetro.requestFocus();
                 } else {
                     ladoArea = Double.parseDouble(txtLadoArea.getText().toString().replace(",", ""));

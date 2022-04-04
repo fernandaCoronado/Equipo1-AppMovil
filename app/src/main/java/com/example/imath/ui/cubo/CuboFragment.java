@@ -104,7 +104,7 @@ public class CuboFragment extends Fragment {
             public void onClick(View view) {
                 unidadVolumen = spUnidadVolumen.getSelectedItem().toString();
                 if (txtAristaVolumen.length() == 0) {
-                    txtAristaVolumen.setError("Faltan datos");
+                    txtAristaVolumen.setError("Falta el valor del arista");
                     txtAristaVolumen.requestFocus();
                 } else {
                     aristaVolumen = Double.parseDouble(txtAristaVolumen.getText().toString().replace(",", ""));
@@ -139,7 +139,7 @@ public class CuboFragment extends Fragment {
             public void onClick(View view) {
                 unidadArea = spUnidadArea.getSelectedItem().toString();
                 if (txtAristaArea.length() == 0) {
-                    txtAristaArea.setError("Faltan datos");
+                    txtAristaArea.setError("Falta el valor del arista");
                     txtAristaArea.requestFocus();
                 } else {
                     aristaArea = Double.parseDouble(txtAristaArea.getText().toString().replace(",", ""));

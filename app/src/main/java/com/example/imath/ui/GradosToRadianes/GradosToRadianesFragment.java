@@ -52,7 +52,7 @@ public class GradosToRadianesFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (recibirDatos.length() == 0)
-                    recibirDatos.setError("Faltan datos");
+                    recibirDatos.setError("Falta el valor de los grados");
                 else {
                     grados = Double.parseDouble(recibirDatos.getText().toString().replace(",", ""));
                     radianes = (grados * Math.PI) / 180;

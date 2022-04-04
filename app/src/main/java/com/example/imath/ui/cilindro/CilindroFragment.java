@@ -109,11 +109,11 @@ public class CilindroFragment extends Fragment {
                 unidadVolumen = spUnidadVolumen.getSelectedItem().toString();
                 if (txtRadioVolumen.length() == 0 || txtAlturaVolumen.length() == 0) {
                     if (txtRadioVolumen.length() == 0) {
-                        txtRadioVolumen.setError("Faltan datos");
+                        txtRadioVolumen.setError("Falta el radio");
                         txtRadioVolumen.requestFocus();
                     }
                     if (txtAlturaVolumen.length() == 0) {
-                        txtAlturaVolumen.setError("Faltan datos");
+                        txtAlturaVolumen.setError("Falta la altura");
                         txtAlturaVolumen.requestFocus();
                     }
                 } else {
@@ -152,11 +152,11 @@ public class CilindroFragment extends Fragment {
                 unidadArea = spUnidadArea.getSelectedItem().toString();
                 if (txtRadioArea.length() == 0 || txtAlturaArea.length() == 0) {
                     if (txtRadioArea.length() == 0) {
-                        txtRadioArea.setError("Faltan datos");
+                        txtRadioArea.setError("Falta el radio");
                         txtRadioArea.requestFocus();
                     }
                     if (txtAlturaArea.length() == 0) {
-                        txtAlturaArea.setError("Faltan datos");
+                        txtAlturaArea.setError("Falta la altura");
                         txtAlturaArea.requestFocus();
                     }
                 } else {

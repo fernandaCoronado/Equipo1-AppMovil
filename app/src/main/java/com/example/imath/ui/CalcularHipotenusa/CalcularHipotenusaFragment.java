@@ -81,10 +81,10 @@ public class CalcularHipotenusaFragment extends Fragment {
                     // txtRadioPerimetro.requestFocus();
                     // c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
                     if (txtCatetoA.length() == 0) {
-                        txtCatetoA.setError("Faltan datos");
+                        txtCatetoA.setError("Falta el cateto a");
                     }
                     if (txtCatetoB.length() == 0) {
-                        txtCatetoB.setError("Faltan datos");
+                        txtCatetoB.setError("Falta el cateto b");
                     }
                 } else {
                     catetoA = Double.parseDouble(txtCatetoA.getText().toString().replace(",", ""));

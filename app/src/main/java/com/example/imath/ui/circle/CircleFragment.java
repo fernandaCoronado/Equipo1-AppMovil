@@ -104,7 +104,7 @@ public class CircleFragment extends Fragment {
             public void onClick(View view) {
                 unidadPerimetro = spUnidadPerimetro.getSelectedItem().toString();
                 if (txtRadioPerimetro.length() == 0) {
-                    txtRadioPerimetro.setError("Faltan datos");
+                    txtRadioPerimetro.setError("Falta el radio");
                     txtRadioPerimetro.requestFocus();
                 } else {
                     radioPerimetro = Double.parseDouble(txtRadioPerimetro.getText().toString().replace(",", ""));
@@ -139,7 +139,7 @@ public class CircleFragment extends Fragment {
             public void onClick(View view) {
                 unidadArea = spUnidadArea.getSelectedItem().toString();
                 if (txtRadioArea.length() == 0) {
-                    txtRadioArea.setError("Faltan datos");
+                    txtRadioArea.setError("Falta el radio");
                     txtRadioArea.requestFocus();
                 } else {
                     radioArea = Double.parseDouble(txtRadioArea.getText().toString().replace(",", ""));

@@ -111,11 +111,11 @@ public class RectangleFragment extends Fragment {
                 if (txtBasePerimetro.length() == 0 || txtAlturaPerimetro.length() == 0) {
                     // Mensajes de error
                     if (txtBasePerimetro.length() == 0) {
-                        txtBasePerimetro.setError("Faltan datos");
+                        txtBasePerimetro.setError("Falta el perímetro");
                         txtBasePerimetro.requestFocus();
                     }
                     if (txtAlturaPerimetro.length() == 0) {
-                        txtAlturaPerimetro.setError("Faltan datos");
+                        txtAlturaPerimetro.setError("Falta la altura");
                         txtAlturaPerimetro.requestFocus();
                     }
                 } else {
@@ -156,11 +156,11 @@ public class RectangleFragment extends Fragment {
                 if (txtBaseArea.length() == 0 || txtAlturaArea.length() == 0) {
                     // Mensajes de error
                     if (txtBaseArea.length() == 0) {
-                        txtBaseArea.setError("Faltan datos");
+                        txtBaseArea.setError("Falta la base");
                         txtBaseArea.requestFocus();
                     }
                     if (txtAlturaArea.length() == 0) {
-                        txtAlturaArea.setError("Faltan datos");
+                        txtAlturaArea.setError("Falta la altura");
                         txtAlturaArea.requestFocus();
                     }
                 } else {

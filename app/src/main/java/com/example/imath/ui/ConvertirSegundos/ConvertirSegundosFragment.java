@@ -66,7 +66,7 @@ public class ConvertirSegundosFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (txtSegundos.length() == 0)
-                    txtSegundos.setError("Faltan datos");
+                    txtSegundos.setError("Faltan los segundos");
                 else {
                     segundos = Integer.parseInt(txtSegundos.getText().toString().replace(",", ""));
                     grados = (double) segundos / 3600;
@@ -86,7 +86,7 @@ public class ConvertirSegundosFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (txtSegundos.length() == 0)
-                    txtSegundos.setError("Faltan datos");
+                    txtSegundos.setError("Faltan los segundos");
                 else {
                     segundos = Integer.parseInt(txtSegundos.getText().toString().replace(",", ""));
                     minutos = (double) segundos / 60;

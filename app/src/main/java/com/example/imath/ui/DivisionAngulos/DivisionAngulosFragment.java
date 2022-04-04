@@ -75,7 +75,7 @@ public class DivisionAngulosFragment extends Fragment {
 
                 if (txtDivisor.length() == 0 || txtDivisor.getText().toString().equals("0")) {
                     if (txtDivisor.length() == 0)
-                        txtDivisor.setError("Faltan datos");
+                        txtDivisor.setError("Falta el valor del divisor");
                     if (txtDivisor.getText().toString().equals("0"))
                         txtDivisor.setError("El divisor no puede ser 0");
                 } else {
