@@ -59,7 +59,7 @@
                 android:id="@+id/id_grados"
                 android:layout_width="280dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="65dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:hint="Grados a convertir"
@@ -85,9 +85,9 @@
 
             <Button
                 android:id="@+id/id_borrar"
-                android:layout_width="155dp"
+                android:layout_width="@dimen/btn_g_width"
                 android:layout_height="57dp"
-                android:layout_marginStart="35dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="30dp"
                 android:text="BORRAR"
                 android:tooltipText="@string/btn_borrar"
@@ -97,10 +97,10 @@
 
             <Button
                 android:id="@+id/id_convertir"
-                android:layout_width="155dp"
+                android:layout_width="@dimen/btn_g_width"
                 android:layout_height="57dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginEnd="35dp"
+                android:layout_marginEnd="15dp"
                 android:text="CONVERTIR"
                 android:tooltipText="@string/btn_calcular"
                 app:icon="@drawable/ic_convertir"

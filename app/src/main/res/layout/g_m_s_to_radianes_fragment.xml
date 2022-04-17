@@ -58,7 +58,7 @@
                 android:id="@+id/insMinutos"
                 android:layout_width="92dp"
                 android:layout_height="35dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="3dp"
                 android:layout_marginTop="20dp"
                 android:text="MINUTOS"
                 android:textAlignment="center"
@@ -99,7 +99,7 @@
                 android:id="@+id/id_minutos"
                 android:layout_width="92dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="3dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
                 android:hint="Minutos"
@@ -125,9 +125,9 @@
 
             <Button
                 android:id="@+id/id_borrar"
-                android:layout_width="155dp"
+                android:layout_width="@dimen/btn_g_width"
                 android:layout_height="57dp"
-                android:layout_marginStart="35dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="30dp"
                 android:text="BORRAR"
                 android:tooltipText="@string/btn_borrar"
@@ -137,10 +137,10 @@
 
             <Button
                 android:id="@+id/id_convertir"
-                android:layout_width="155dp"
+                android:layout_width="@dimen/btn_g_width"
                 android:layout_height="57dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginEnd="35dp"
+                android:layout_marginEnd="15dp"
                 android:text="CONVERTIR"
                 android:tooltipText="@string/btn_calcular"
                 app:icon="@drawable/ic_convertir"

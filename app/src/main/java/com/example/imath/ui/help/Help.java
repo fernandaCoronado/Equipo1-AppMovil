@@ -53,6 +53,14 @@ public class Help extends AppCompatActivity {
         versionsList = new ArrayList<>();
 
         // Add required information
+        versionsList.add(new Versions("Instrucciones de uso",
+                "Para utilizar la aplicación se debe de seguir el siguiente proceso: " +
+                        "\n 1. Abrir la aplicación." +
+                        "\n 2. Una vez que la aplicación abra, se le mostrará la pantalla de inicio." +
+                        "\n 3. En el menú lateral desplegable aparecen todas las opciones que puede " +
+                        "utilizar, seleccione la que necesite." +
+                        "\n 4. Cuando se abra la pantalla del tema seleccionado, ingrese los datos" +
+                        "solicitados y listo, obtendrá el respectivo resultado."));
         versionsList.add(new Versions("¿Es necesario una cuenta para utilizar la aplicación?",
                 "No, la aplicación no guarda registro de usuarios por lo que cualquier persona puede utilizarla."));
         versionsList.add(new Versions("¿La aplicación guarda algún historial de operaciones?",

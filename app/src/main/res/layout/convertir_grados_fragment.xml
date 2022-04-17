@@ -69,9 +69,9 @@
 
             <Button
                 android:id="@+id/id_conv_min"
-                android:layout_width="146dp"
+                android:layout_width="@dimen/btn_width"
                 android:layout_height="57dp"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:text="MINUTOS"
                 android:tooltipText="@string/btn_minutos"
@@ -80,10 +80,10 @@
 
             <Button
                 android:id="@+id/id_conv_seg"
-                android:layout_width="146dp"
+                android:layout_width="@dimen/btn_width"
                 android:layout_height="57dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="40dp"
+                android:layout_marginEnd="30dp"
                 android:text="SEGUNDOS"
                 android:tooltipText="@string/btn_segundos"
                 app:layout_constraintEnd_toEndOf="parent"

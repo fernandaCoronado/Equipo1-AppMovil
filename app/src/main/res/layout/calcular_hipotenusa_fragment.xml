@@ -43,45 +43,44 @@
 
             <EditText
                 android:id="@+id/id_cateto_a"
-                android:layout_width="110dp"
+                android:layout_width="@dimen/txt_tp_width"
                 android:layout_height="48dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="30dp"
                 android:ems="10"
                 android:hint="* Cateto a"
+                android:textAlignment="center"
                 android:inputType="numberDecimal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_cata" />
 
             <EditText
                 android:id="@+id/id_cateto_b"
-                android:layout_width="110dp"
+                android:layout_width="@dimen/txt_tp_width"
                 android:layout_height="48dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginEnd="10dp"
                 android:ems="10"
                 android:hint="* Cateto b"
+                android:textAlignment="center"
                 android:inputType="numberDecimal"
                 app:layout_constraintStart_toEndOf="@+id/id_cateto_a"
                 app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_cata" />
 
             <Spinner
                 android:id="@+id/id_unidad"
-                android:layout_width="110dp"
+                android:layout_width="@dimen/sp_unidad"
                 android:layout_height="48dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginEnd="30dp"
+                android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.189"
-                app:layout_constraintStart_toEndOf="@+id/id_cateto_b"
                 app:layout_constraintTop_toBottomOf="@+id/id_instrucciones_cata" />
 
             <Button
                 android:id="@+id/id_eliminar"
-                android:layout_width="146dp"
+                android:layout_width="@dimen/btn_width"
                 android:layout_height="57dp"
-                android:layout_marginStart="35dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="40dp"
                 android:text="borrar"
                 app:icon="@drawable/ic_delete"
@@ -91,10 +90,10 @@
 
             <Button
                 android:id="@+id/id_calcular"
-                android:layout_width="146dp"
+                android:layout_width="@dimen/btn_width"
                 android:layout_height="57dp"
                 android:layout_marginTop="40dp"
-                android:layout_marginEnd="35dp"
+                android:layout_marginEnd="30dp"
                 android:text="calcular"
                 app:icon="@drawable/ic_calculate"
                 android:tooltipText="@string/btn_calcular"

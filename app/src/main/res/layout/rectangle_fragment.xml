@@ -82,10 +82,10 @@
 
                         <Button
                             android:id="@+id/btnPerimetro"
-                            android:layout_width="155dp"
+                            android:layout_width="@dimen/btn_width"
                             android:layout_height="60dp"
                             android:layout_marginTop="18dp"
-                            android:layout_marginEnd="35dp"
+                            android:layout_marginEnd="30dp"
                             android:drawableLeft="@drawable/ic_calculate"
                             android:text="Calcular"
                             android:tooltipText="@string/btn_perimetro"
@@ -94,9 +94,9 @@
 
                         <Button
                             android:id="@+id/btnBorrarPerimetro"
-                            android:layout_width="155dp"
+                            android:layout_width="@dimen/btn_width"
                             android:layout_height="60dp"
-                            android:layout_marginStart="35dp"
+                            android:layout_marginStart="30dp"
                             android:layout_marginTop="18dp"
                             android:drawableLeft="@drawable/ic_delete"
                             android:text="Borrar"
@@ -211,10 +211,10 @@
 
                         <Button
                             android:id="@+id/btnArea"
-                            android:layout_width="155dp"
+                            android:layout_width="@dimen/btn_width"
                             android:layout_height="60dp"
                             android:layout_marginTop="18dp"
-                            android:layout_marginEnd="35dp"
+                            android:layout_marginEnd="30dp"
                             android:drawableLeft="@drawable/ic_calculate"
                             android:text="Calcular"
                             android:tooltipText="@string/btn_area"
@@ -223,9 +223,9 @@
 
                         <Button
                             android:id="@+id/btnBorrarArea"
-                            android:layout_width="155dp"
+                            android:layout_width="@dimen/btn_width"
                             android:layout_height="60dp"
-                            android:layout_marginStart="35dp"
+                            android:layout_marginStart="30dp"
                             android:layout_marginTop="18dp"
                             android:drawableLeft="@drawable/ic_delete"
                             android:tooltipText="@string/btn_borrar"

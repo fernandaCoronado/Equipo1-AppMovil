@@ -131,8 +131,12 @@ public class RestaAngulosFragment extends Fragment {
                 }
 
                 if (grados2 > grados1) {
-                    tvAlerta.setText("No se puede calcular.");
+                    tvAlerta.setText("No se puede calcular. Los grados " + grados2 + " son mayores a " + grados1);
+                    tvGrados.setText("");
+                    tvMinutos.setText("");
+                    tvSegundos.setText("");
                 } else {
+                    tvAlerta.setText("Resultado");
                     totalGrados = grados1 - grados2;
                     // mostrarResultado.setText("RESULTADO\n" + grados + " °  " + minutos + " \'  " + segundos + " \"");
                     if (totalGrados >= 1000) {
@@ -173,6 +177,7 @@ public class RestaAngulosFragment extends Fragment {
                 tvGrados.setText("");
                 tvMinutos.setText("");
                 tvSegundos.setText("");
+                tvAlerta.setText("Resultado");
             }
 
         });

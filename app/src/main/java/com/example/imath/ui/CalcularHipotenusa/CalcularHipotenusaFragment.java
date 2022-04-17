@@ -95,10 +95,10 @@ public class CalcularHipotenusaFragment extends Fragment {
                         hipotenusa = Math.sqrt(Math.pow(catetoA, 2) + Math.pow(catetoB, 2));
                         if (hipotenusa >= 1000) {
                             decimalFormat[0] = new DecimalFormat("#0,000.0000");
-                            tvResultado.setText("Cateto b \n" + decimalFormat[0].format(hipotenusa) + " " + unidad);
+                            tvResultado.setText("Hipotenusa \n" + decimalFormat[0].format(hipotenusa) + " " + unidad);
                         } else {
                             decimalFormat[0] = new DecimalFormat("#0.0000");
-                            tvResultado.setText("Cateto b \n" + decimalFormat[0].format(hipotenusa) + " " + unidad);
+                            tvResultado.setText("Hipotenusa \n" + decimalFormat[0].format(hipotenusa) + " " + unidad);
                         }
                     } else {
                         tvResultado.setText("UNIDAD NO VÁLIDA");
